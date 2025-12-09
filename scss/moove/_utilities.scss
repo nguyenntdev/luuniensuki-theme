@@ -1,0 +1,152 @@
+// Imperial Theme Utility Classes - Tailwind-inspired
+
+// Hover Effects
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-gold;
+    }
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.hover-scale-sm {
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.02);
+    }
+}
+
+.hover-glow {
+    transition: filter 0.3s ease;
+    
+    &:hover {
+        filter: drop-shadow(0 0 20px rgba($imperial-gold, 0.4));
+    }
+}
+
+.hover-brightness {
+    transition: filter 0.3s ease;
+    
+    &:hover {
+        filter: brightness(1.2);
+    }
+}
+
+// Glow Effects
+.glow-gold {
+    filter: drop-shadow(0 0 20px rgba($imperial-gold, 0.4));
+}
+
+.glow-gold-sm {
+    filter: drop-shadow(0 0 10px rgba($imperial-gold, 0.3));
+}
+
+.glow-gold-lg {
+    filter: drop-shadow(0 0 30px rgba($imperial-gold, 0.5));
+}
+
+.text-glow-gold {
+    text-shadow: 0 0 10px rgba($imperial-gold, 0.3);
+}
+
+.text-glow-gold-lg {
+    text-shadow: 0 0 20px rgba($imperial-gold, 0.5);
+}
+
+// Shimmer Effect
+.shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba($imperial-gold, 0.1) 0%,
+        rgba($imperial-gold, 0.3) 50%,
+        rgba($imperial-gold, 0.1) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+// Glass Morphism
+.glass {
+    background: rgba($deep-navy, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba($imperial-gold, 0.1);
+}
+
+.glass-light {
+    background: rgba($ivory, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba($imperial-gold, 0.2);
+}
+
+// Border Utilities
+.border-gold {
+    border-color: $imperial-gold;
+}
+
+.border-gold-light {
+    border-color: rgba($imperial-gold, 0.3);
+}
+
+.border-gradient {
+    border: 1px solid transparent;
+    background-image: 
+        linear-gradient($deep-navy, $deep-navy),
+        $gradient-gold;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+// Spacing Utilities
+.space-y-xs > * + * { margin-top: $spacing-xs; }
+.space-y-sm > * + * { margin-top: $spacing-sm; }
+.space-y-md > * + * { margin-top: $spacing-md; }
+.space-y-lg > * + * { margin-top: $spacing-lg; }
+.space-y-xl > * + * { margin-top: $spacing-xl; }
+
+// Flex Utilities
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+// Transition Utilities
+.transition-smooth {
+    transition: $transition-smooth;
+}
+
+.transition-spring {
+    transition: $transition-spring;
+}
+
+// Opacity Utilities
+.opacity-0 { opacity: 0; }
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
+

@@ -1,0 +1,114 @@
+// Vietnamese Imperial Patterns
+
+// Van May (Cloud Pattern) - Traditional Vietnamese cloud motif
+.pattern-van-may {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5c-5 0-10 3-12 8-3-2-7-3-11-1 2 5 6 8 11 8-2 4-2 9 1 13 5-2 8-6 8-11 4 2 9 2 13-1-2-5-6-8-11-8 2-4 2-9-1-13' fill='none' stroke='%23C4A35A' stroke-width='0.5' opacity='0.3'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+    background-repeat: repeat;
+}
+
+// Thuy Ba (Wave Pattern) - Traditional Vietnamese wave motif
+.pattern-thuy-ba {
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q25 0 50 10 T100 10' fill='none' stroke='%23C4A35A' stroke-width='0.5' opacity='0.3'/%3E%3Cpath d='M0 15 Q25 5 50 15 T100 15' fill='none' stroke='%23C4A35A' stroke-width='0.5' opacity='0.2'/%3E%3C/svg%3E");
+    background-size: 100px 20px;
+    background-repeat: repeat-x;
+}
+
+// Dot Pattern - Subtle background texture
+.pattern-dots {
+    background-image: radial-gradient(circle, rgba($imperial-gold, 0.02) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-repeat: repeat;
+}
+
+// Grid Pattern - Modern geometric pattern
+.pattern-grid {
+    background-image: 
+        linear-gradient(rgba($imperial-gold, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba($imperial-gold, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-repeat: repeat;
+}
+
+// Diagonal Lines Pattern
+.pattern-diagonal {
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba($imperial-gold, 0.03) 10px,
+        rgba($imperial-gold, 0.03) 20px
+    );
+}
+
+// Hexagon Pattern - Imperial honeycomb
+.pattern-hexagon {
+    background-image: url("data:image/svg+xml,%3Csvg width='56' height='100' viewBox='0 0 56 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23C4A35A' stroke-width='0.5' opacity='0.2'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23C4A35A' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+    background-size: 56px 100px;
+    background-repeat: repeat;
+}
+
+// Pattern Overlay Utility
+.pattern-overlay {
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba($imperial-gold, 0.02) 1px, transparent 1px);
+        background-size: 32px 32px;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+// Pattern with Animation
+.pattern-animated {
+    position: relative;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba($imperial-gold, 0.03) 1px, transparent 1px);
+        background-size: 32px 32px;
+        animation: pattern-shift 20s linear infinite;
+        pointer-events: none;
+    }
+}
+
+@keyframes pattern-shift {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 32px 32px;
+    }
+}
+
+// Custom Scrollbar - Imperial Theme
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(222, 47%, 8%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba($imperial-gold, 0.3);
+    border-radius: 4px;
+    
+    &:hover {
+        background: rgba($imperial-gold, 0.5);
+    }
+}
+
+// Firefox scrollbar
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba($imperial-gold, 0.3) hsl(222, 47%, 8%);
+}
+
