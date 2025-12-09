@@ -25,3 +25,20 @@
         --moove-card-bg: #{$white};
     }
 }
+
+// Smooth transitions when switching color modes
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+// Logo color switching
+.navbar-brand,
+.logo {
+    [data-bs-theme="dark"] & {
+        filter: brightness(1) drop-shadow(0 0 10px rgba($imperial-gold, 0.3));
+    }
+
+    [data-bs-theme="light"] & {
+        filter: brightness(0.8) drop-shadow(0 0 10px rgba($bronze, 0.2));
+    }
+}
