@@ -1,0 +1,175 @@
+// Imperial Theme Drawer/Sidebar Enhancements
+
+// Main Drawer Container
+.drawer {
+    background: $deep-navy;
+    border-left: 1px solid rgba($imperial-gold, 0.1);
+    box-shadow: $shadow-elegant;
+    
+    &.drawer-left {
+        border-left: none;
+        border-right: 1px solid rgba($imperial-gold, 0.1);
+    }
+}
+
+// Drawer Header
+.drawer-header {
+    background: $navy-card;
+    border-bottom: 1px solid rgba($imperial-gold, 0.2);
+    padding: 1.5rem;
+    
+    h3 {
+        color: $imperial-gold;
+        font-family: $font-family-serif;
+        margin-bottom: 0;
+    }
+    
+    .close-drawer {
+        color: $imperial-gold;
+        transition: $transition-smooth;
+        
+        &:hover {
+            color: $imperial-gold-light;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+// Drawer Body
+.drawer-body {
+    padding: 1.5rem;
+    background: $deep-navy;
+}
+
+// Drawer Navigation
+.drawer-nav {
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-link {
+        color: $foreground-primary;
+        padding: 0.75rem 1rem;
+        border-radius: $border-radius-md;
+        transition: $transition-smooth;
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 0;
+            background: $gradient-gold;
+            border-radius: 0 2px 2px 0;
+            transition: height 0.3s ease;
+        }
+        
+        &:hover {
+            background: rgba($imperial-gold, 0.1);
+            color: $imperial-gold;
+            padding-left: 1.5rem;
+            
+            &::before {
+                height: 70%;
+            }
+        }
+        
+        &.active {
+            background: rgba($imperial-gold, 0.15);
+            color: $imperial-gold;
+            font-weight: $font-weight-semibold;
+            
+            &::before {
+                height: 70%;
+            }
+        }
+    }
+    
+    .nav-icon {
+        margin-right: 0.75rem;
+        color: $imperial-gold;
+        transition: $transition-smooth;
+    }
+    
+    .nav-link:hover .nav-icon {
+        filter: drop-shadow(0 0 10px rgba($imperial-gold, 0.5));
+    }
+}
+
+// Course Index Drawer
+.courseindex-drawer {
+    .courseindex-section {
+        border-bottom: 1px solid rgba($imperial-gold, 0.1);
+        padding: 1rem 0;
+        
+        .courseindex-section-title {
+            color: $imperial-gold;
+            font-weight: $font-weight-semibold;
+            cursor: pointer;
+            transition: $transition-smooth;
+            
+            &:hover {
+                color: $imperial-gold-light;
+                text-shadow: 0 0 10px rgba($imperial-gold, 0.3);
+            }
+        }
+        
+        .courseindex-item {
+            padding: 0.5rem 1rem;
+            color: $foreground-muted;
+            transition: $transition-smooth;
+            border-radius: $border-radius-sm;
+            
+            &:hover {
+                background: rgba($imperial-gold, 0.1);
+                color: $foreground-primary;
+                padding-left: 1.5rem;
+            }
+            
+            &.current {
+                background: rgba($imperial-gold, 0.15);
+                color: $imperial-gold;
+                border-left: 3px solid $imperial-gold;
+            }
+        }
+    }
+}
+
+// Block Drawer
+.block-drawer {
+    .block {
+        background: $navy-card;
+        border: 1px solid rgba($imperial-gold, 0.1);
+        border-radius: $border-radius-md;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        
+        .block-header {
+            background: rgba($imperial-gold, 0.05);
+            padding: 1rem;
+            border-bottom: 1px solid rgba($imperial-gold, 0.1);
+            
+            h3 {
+                color: $imperial-gold;
+                font-size: 1.125rem;
+                margin-bottom: 0;
+            }
+        }
+        
+        .block-content {
+            padding: 1rem;
+            color: $foreground-primary;
+        }
+    }
+}
+
+// Drawer Footer
+.drawer-footer {
+    background: $navy-card;
+    border-top: 1px solid rgba($imperial-gold, 0.2);
+    padding: 1rem 1.5rem;
+}
+
