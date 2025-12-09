@@ -118,7 +118,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_moove/brandcolor';
     $title = get_string('brandcolor', 'theme_moove');
     $description = get_string('brandcolor_desc', 'theme_moove');
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#0f47ad');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#C4A35A');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
@@ -127,7 +127,7 @@ if ($ADMIN->fulltree) {
     $name = 'theme_moove/secondarymenucolor';
     $title = get_string('secondarymenucolor', 'theme_moove');
     $description = get_string('secondarymenucolor_desc', 'theme_moove');
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#0f47ad');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '#C4A35A');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
@@ -147,6 +147,8 @@ if ($ADMIN->fulltree) {
         'Manrope' => 'Manrope',
         'Sora' => 'Sora',
         'Epilogue' => 'Epilogue',
+        'Playfair Display' => 'Playfair Display (Serif)',
+        'Be Vietnam Pro' => 'Be Vietnam Pro (Vietnamese)',
     ];
 
     $name = 'theme_moove/fontsite';
