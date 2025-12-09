@@ -47,7 +47,6 @@ function theme_moove_get_main_scss_content($theme) {
 
     // Moove scss.
     $moovevariables = file_get_contents($CFG->dirroot . '/theme/moove/scss/moove/_variables.scss');
-    $moove = file_get_contents($CFG->dirroot . '/theme/moove/scss/default.scss');
     $security = file_get_contents($CFG->dirroot . '/theme/moove/scss/moove/_security.scss');
 
     $lastpreset = '';
@@ -55,8 +54,18 @@ function theme_moove_get_main_scss_content($theme) {
         $lastpreset = $presetfile->get_content();
     }
 
-    // Combine them together.
-    $allscss = $moovevariables . "\n" . $scss . "\n" . $moove . "\n" . $lastpreset .    "\n" . $security;
+    // Check theme preset selection.
+    $themepreset = isset($theme->settings->themepreset) ? $theme->settings->themepreset : 'classic';
+
+    if ($themepreset === 'imperial') {
+        // Load imperial theme files.
+        $imperial = file_get_contents($CFG->dirroot . '/theme/moove/scss/imperial.scss');
+        $allscss = $moovevariables . "\n" . $scss . "\n" . $imperial . "\n" . $lastpreset . "\n" . $security;
+    } else {
+        // Load classic theme files.
+        $moove = file_get_contents($CFG->dirroot . '/theme/moove/scss/default.scss');
+        $allscss = $moovevariables . "\n" . $scss . "\n" . $moove . "\n" . $lastpreset . "\n" . $security;
+    }
 
     return $allscss;
 }

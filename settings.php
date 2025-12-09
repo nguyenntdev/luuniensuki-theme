@@ -91,6 +91,19 @@ if ($ADMIN->fulltree) {
     );
     $page->add($setting);
 
+    // Theme preset selection (Classic vs Imperial).
+    $name = 'theme_moove/themepreset';
+    $title = get_string('themepreset', 'theme_moove');
+    $description = get_string('themepreset_desc', 'theme_moove');
+    $default = 'classic';
+    $choices = [
+        'classic' => get_string('themepreset_classic', 'theme_moove'),
+        'imperial' => get_string('themepreset_imperial', 'theme_moove')
+    ];
+    $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Login page background image.
     $name = 'theme_moove/loginbgimg';
     $title = get_string('loginbgimg', 'theme_moove');

@@ -25,12 +25,10 @@ Installation
 ------------
 
 **First way**
-
 - Clone this repository into the folder theme.
 - Access the notification area in moodle and install
 
 **Second way**
-
 - Download this repository
 - Extract the content
 - Put the folder into the folder theme of your moodle
