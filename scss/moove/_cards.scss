@@ -1,0 +1,158 @@
+// Imperial Theme Card Components
+
+// Base Card Styles
+.card {
+    background: $card-bg;
+    border: 1px solid $card-border;
+    border-radius: $border-radius-md;
+    transition: $transition-smooth;
+    
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-card;
+    }
+}
+
+// Imperial Card with Gradient Border
+.card-imperial {
+    position: relative;
+    background: $card-bg;
+    border-radius: $border-radius-md;
+    padding: 1.5rem;
+    transition: $transition-smooth;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        border-radius: inherit;
+        background: $gradient-gold;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:hover::before {
+        opacity: 1;
+    }
+    
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: $shadow-gold;
+    }
+}
+
+// Card with Glow Effect
+.card-glow {
+    background: $card-bg;
+    border: 1px solid $card-border;
+    border-radius: $border-radius-md;
+    transition: $transition-smooth;
+    
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-gold;
+        border-color: rgba($imperial-gold, 0.3);
+    }
+}
+
+// Glass Card
+.card-glass {
+    background: rgba($deep-navy, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba($imperial-gold, 0.1);
+    border-radius: $border-radius-md;
+    transition: $transition-smooth;
+    
+    &:hover {
+        background: rgba($deep-navy, 0.8);
+        border-color: rgba($imperial-gold, 0.2);
+        transform: translateY(-4px);
+    }
+}
+
+// Card Header
+.card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid $card-border;
+    background: rgba($imperial-gold, 0.05);
+    
+    h3, h4, h5 {
+        margin-bottom: 0;
+        color: $imperial-gold;
+    }
+}
+
+// Card Body
+.card-body {
+    padding: 1.5rem;
+    color: $foreground-primary;
+}
+
+// Card Footer
+.card-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid $card-border;
+    background: rgba($deep-navy, 0.3);
+}
+
+// Course Card Enhancement
+.course-card {
+    position: relative;
+    background: $card-bg;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    transition: $transition-smooth;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $gradient-glow;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+    
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: $shadow-elegant;
+        
+        &::after {
+            opacity: 1;
+        }
+    }
+    
+    .course-image {
+        position: relative;
+        overflow: hidden;
+        
+        img {
+            transition: transform 0.5s ease;
+        }
+        
+        &:hover img {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Activity Card
+.activity-card {
+    background: $card-bg;
+    border: 1px solid $card-border;
+    border-radius: $border-radius-md;
+    padding: 1rem;
+    transition: $transition-smooth;
+    
+    &:hover {
+        border-color: rgba($imperial-gold, 0.3);
+        box-shadow: $shadow-card;
+    }
+}
+

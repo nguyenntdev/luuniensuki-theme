@@ -1,0 +1,171 @@
+// Imperial Theme Loading States
+
+// Shimmer Loading Effect
+.loading-shimmer {
+    background: linear-gradient(
+        90deg,
+        rgba($imperial-gold, 0.1) 0%,
+        rgba($imperial-gold, 0.3) 50%,
+        rgba($imperial-gold, 0.1) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+// Skeleton Loader
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba($navy-lighter, 1) 0%,
+        rgba($imperial-gold, 0.1) 50%,
+        rgba($navy-lighter, 1) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: $border-radius-sm;
+}
+
+.skeleton-text {
+    height: 1rem;
+    margin-bottom: 0.5rem;
+    
+    &:last-child {
+        width: 80%;
+    }
+}
+
+.skeleton-title {
+    height: 2rem;
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.skeleton-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.skeleton-card {
+    height: 200px;
+    border-radius: $border-radius-md;
+}
+
+// Spinner - Imperial Gold
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba($imperial-gold, 0.2);
+    border-top-color: $imperial-gold;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.spinner-sm {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+}
+
+.spinner-lg {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// Pulse Loading
+.loading-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+// Dots Loading
+.loading-dots {
+    display: inline-flex;
+    gap: 0.5rem;
+    
+    span {
+        width: 8px;
+        height: 8px;
+        background: $imperial-gold;
+        border-radius: 50%;
+        animation: dot-pulse 1.4s infinite ease-in-out;
+        
+        &:nth-child(1) {
+            animation-delay: -0.32s;
+        }
+        
+        &:nth-child(2) {
+            animation-delay: -0.16s;
+        }
+    }
+}
+
+@keyframes dot-pulse {
+    0%, 80%, 100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+// Progress Bar
+.progress-bar {
+    height: 4px;
+    background: rgba($imperial-gold, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        background: $gradient-gold;
+        animation: progress 2s ease-in-out infinite;
+    }
+}
+
+@keyframes progress {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+// Loading Overlay
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba($deep-navy, 0.9);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    
+    .spinner {
+        width: 60px;
+        height: 60px;
+        border-width: 4px;
+    }
+}
+

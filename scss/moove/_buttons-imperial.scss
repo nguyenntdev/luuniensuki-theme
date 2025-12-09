@@ -1,0 +1,164 @@
+// Imperial Theme Button Components
+
+// Primary Button - Imperial Gold
+.btn-primary {
+    background: $btn-primary-bg;
+    color: $btn-primary-color;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: $border-radius-md;
+    font-weight: $font-weight-semibold;
+    transition: $transition-smooth;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:hover {
+        background: $imperial-gold-light;
+        transform: translateY(-2px);
+        box-shadow: $shadow-gold;
+        
+        &::before {
+            opacity: 1;
+        }
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Secondary Button - Navy
+.btn-secondary {
+    background: $btn-secondary-bg;
+    color: $btn-secondary-color;
+    border: 1px solid rgba($imperial-gold, 0.3);
+    padding: 0.75rem 1.5rem;
+    border-radius: $border-radius-md;
+    font-weight: $font-weight-semibold;
+    transition: $transition-smooth;
+    
+    &:hover {
+        background: rgba($imperial-gold, 0.1);
+        border-color: $imperial-gold;
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Outline Button
+.btn-outline-primary {
+    background: transparent;
+    color: $imperial-gold;
+    border: 2px solid $imperial-gold;
+    padding: 0.75rem 1.5rem;
+    border-radius: $border-radius-md;
+    font-weight: $font-weight-semibold;
+    transition: $transition-smooth;
+    
+    &:hover {
+        background: $imperial-gold;
+        color: $deep-navy;
+        transform: translateY(-2px);
+        box-shadow: $shadow-gold;
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Gradient Button
+.btn-gradient {
+    background: $gradient-gold;
+    color: $deep-navy;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: $border-radius-md;
+    font-weight: $font-weight-bold;
+    transition: $transition-smooth;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-gold;
+        filter: brightness(1.1);
+        
+        &::before {
+            opacity: 1;
+        }
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Glass Button
+.btn-glass {
+    background: rgba($deep-navy, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: $imperial-gold;
+    border: 1px solid rgba($imperial-gold, 0.2);
+    padding: 0.75rem 1.5rem;
+    border-radius: $border-radius-md;
+    font-weight: $font-weight-semibold;
+    transition: $transition-smooth;
+    
+    &:hover {
+        background: rgba($deep-navy, 0.8);
+        border-color: $imperial-gold;
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Ripple Effect
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+    
+    &:active::after {
+        width: 300px;
+        height: 300px;
+    }
+}
+
