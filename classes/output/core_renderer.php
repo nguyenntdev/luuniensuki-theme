@@ -69,8 +69,16 @@ class core_renderer extends \theme_boost\output\core_renderer {
         }
 
         $sitefont = isset($theme->settings->fontsite) ? $theme->settings->fontsite : 'Moodle';
+        $themepreset = isset($theme->settings->themepreset) ? $theme->settings->themepreset : 'classic';
 
-        if ($sitefont != 'Moodle') {
+        // Imperial theme: preload self-hosted fonts
+        if ($themepreset === 'imperial') {
+            $output .= '<link rel="preload" href="' . $CFG->wwwroot . '/theme/moove/fonts/imperial/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+                       <link rel="preload" href="' . $CFG->wwwroot . '/theme/moove/fonts/imperial/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
+                       <link rel="preload" href="' . $CFG->wwwroot . '/theme/moove/fonts/imperial/fonts.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">
+                       <noscript><link rel="stylesheet" href="' . $CFG->wwwroot . '/theme/moove/fonts/imperial/fonts.css"></noscript>';
+        } else if ($sitefont != 'Moodle') {
+            // Classic theme: load Google Fonts
             $output .= '<link rel="preconnect" href="https://fonts.googleapis.com">
                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                        <link href="https://fonts.googleapis.com/css2?family='
