@@ -1,0 +1,274 @@
+// Imperial Theme Frontpage Enhancements
+
+// Hero Section
+.frontpage-hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: $deep-navy;
+    
+    // Multi-layer background
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg,
+            $deep-navy 0%,
+            hsl(230, 48%, 7%) 33%,
+            hsl(235, 45%, 6%) 66%,
+            hsl(222, 50%, 5%) 100%);
+        background-attachment: fixed;
+    }
+    
+    // Animated glow layer
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: 
+            radial-gradient(circle at 20% 20%, rgba($imperial-gold, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba($imperial-red, 0.06) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba($jade-green, 0.04) 0%, transparent 60%);
+        animation: glow-shift 12s ease-in-out infinite;
+        pointer-events: none;
+    }
+    
+    // Pattern overlay
+    .hero-pattern {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba($imperial-gold, 0.02) 1px, transparent 1px);
+        background-size: 32px 32px;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    
+    // Content
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 2rem;
+        max-width: 800px;
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        p {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: $foreground-muted;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+        
+        .hero-cta {
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+    }
+}
+
+// Slider Enhancement
+.frontpage-slider {
+    position: relative;
+    
+    .carousel-item {
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, 
+                rgba($deep-navy, 0.9) 0%, 
+                rgba($deep-navy, 0.6) 50%, 
+                transparent 100%);
+        }
+    }
+    
+    .carousel-caption {
+        text-align: left;
+        left: 10%;
+        right: auto;
+        
+        h3 {
+            font-family: $font-family-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            background: $gradient-gold;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: $foreground-primary;
+            animation: fadeInUp 0.6s ease-out 0.2s backwards;
+        }
+        
+        .btn {
+            animation: fadeInUp 0.6s ease-out 0.4s backwards;
+        }
+    }
+}
+
+// Marketing Boxes
+.marketing-boxes {
+    padding: 4rem 0;
+    
+    .marketing-box {
+        position: relative;
+        background: $card-bg;
+        border: 1px solid $card-border;
+        border-radius: $border-radius-lg;
+        padding: 2rem;
+        text-align: center;
+        transition: $transition-smooth;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            padding: 1px;
+            border-radius: inherit;
+            background: $gradient-gold;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: $shadow-gold;
+            
+            &::before {
+                opacity: 1;
+            }
+            
+            .marketing-icon {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 20px rgba($imperial-gold, 0.5));
+            }
+        }
+
+        .marketing-icon {
+            font-size: 3rem;
+            color: $imperial-gold;
+            margin-bottom: 1.5rem;
+            transition: $transition-smooth;
+        }
+
+        h3 {
+            font-family: $font-family-serif;
+            color: $imperial-gold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: $foreground-muted;
+            line-height: $line-height-relaxed;
+        }
+    }
+
+    // Staggered entrance animations
+    .marketing-box:nth-child(1) {
+        animation: fadeInUp 0.6s ease-out 0.1s backwards;
+    }
+
+    .marketing-box:nth-child(2) {
+        animation: fadeInUp 0.6s ease-out 0.2s backwards;
+    }
+
+    .marketing-box:nth-child(3) {
+        animation: fadeInUp 0.6s ease-out 0.3s backwards;
+    }
+
+    .marketing-box:nth-child(4) {
+        animation: fadeInUp 0.6s ease-out 0.4s backwards;
+    }
+}
+
+// Frontpage Numbers/Stats Section
+.frontpage-numbers {
+    background: $navy-card;
+    padding: 4rem 0;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle, rgba($imperial-gold, 0.02) 1px, transparent 1px);
+        background-size: 32px 32px;
+        opacity: 0.5;
+    }
+
+    .number-box {
+        text-align: center;
+        padding: 2rem;
+
+        .number {
+            font-size: 3rem;
+            font-weight: $font-weight-bold;
+            background: $gradient-gold;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .label {
+            color: $foreground-muted;
+            font-size: 1.125rem;
+        }
+    }
+}
+
+// Frontpage CTA Section
+.frontpage-cta {
+    background: linear-gradient(135deg, $deep-navy 0%, $navy-lighter 100%);
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: $gradient-glow;
+        animation: glow-pulse 3s ease-in-out infinite;
+    }
+
+    .cta-content {
+        position: relative;
+        z-index: 2;
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: $foreground-muted;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
