@@ -487,18 +487,10 @@ if ($ADMIN->fulltree) {
 
     /*
     * --------------------
-    * Footer settings tab
+    * Dark Mode Settings tab (Dark mode is permanently enabled)
     * --------------------
     */
     $page = new admin_settingpage('theme_luuniensuki_darkmode', get_string('darkmodesettings', 'theme_luuniensuki'));
-
-    // Enable dark mode footer.
-    $name = 'theme_luuniensuki/enabledarkmode';
-    $title = get_string('darkmode_enable', 'theme_luuniensuki');
-    $default = 1;
-    $choices = [0 => get_string('no'), 1 => get_string('yes')];
-    $setting = new admin_setting_configselect($name, $title, '', $default, $choices);
-    $page->add($setting);
 
     // Logo file setting.
     $name = 'theme_luuniensuki/logodark';
