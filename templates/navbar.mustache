@@ -64,9 +64,8 @@
     <a href="{{{ config.homeurl }}}" class="navbar-brand d-none d-md-flex align-items-center m-0 me-4 p-0 aabtn">
 
         {{# output.should_display_logo }}
-            <img src="{{output.get_logo}}" class="logo light me-1" alt="{{sitename}}">
             {{#output.get_logo_dark}}
-                <img src="{{.}}" class="logo dark me-1" alt="{{sitename}}">
+                <img src="{{.}}" class="logo me-1" alt="{{sitename}}">
             {{/output.get_logo_dark}}
         {{/ output.should_display_logo }}
         {{^ output.should_display_logo }}
