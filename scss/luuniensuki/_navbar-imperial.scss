@@ -260,11 +260,11 @@ div.secondary-navigation,
 }
 
 // Fix body margin when secondary navigation is present
-// Since we're using position: static, we don't need the extra margin
+// Need space for navbar (70px) + secondary navigation (60px) + spacing
 body.has-secondarynavigation {
     #page,
     #page.drawers {
-        margin-top: 70px !important; // Only navbar height, not navbar + secondary nav
+        margin-top: 145px !important; // Navbar + secondary nav + spacing
     }
 }
 
