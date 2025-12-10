@@ -1,1 +1,22 @@
 #page-footer .copyright{ display: block !important; }
+
+// Fix for secondary navigation visibility
+// Force override Bootstrap's .d-print-none utility class
+// Must be here (loaded last) to override Bootstrap utilities
+.secondary-navigation.d-print-none,
+div.secondary-navigation.d-print-none.moove,
+.d-print-none.secondary-navigation.moove {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+}
+
+// Also ensure child elements are visible
+.secondary-navigation.d-print-none .moove-container-fluid,
+.secondary-navigation.d-print-none nav,
+.secondary-navigation.d-print-none .navigation,
+.secondary-navigation.d-print-none .moremenu {
+    display: block !important;
+    visibility: visible !important;
+}
