@@ -74,29 +74,29 @@ class provider implements
         $toolbar = get_user_preferences(self::TOOLBAR, null, $userid);
         if (isset($toolbar)) {
             writer::export_user_preference(
-                'theme_moove',
+                'theme_luuniensuki',
                 self::TOOLBAR,
                 $toolbar,
-                get_string('privacy:themeluuniensukisettings_enableaccessibilitytoolbar', 'theme_moove', $toolbar)
+                get_string('privacy:themeluuniensukisettings_enableaccessibilitytoolbar', 'theme_luuniensuki', $toolbar)
             );
 
             $fontsize = get_user_preferences(self::FONTSIZE, null, $userid);
             if (isset($fontsize)) {
                 writer::export_user_preference(
-                    'theme_moove',
+                    'theme_luuniensuki',
                     self::FONTSIZE,
                     $fontsize,
-                    get_string('privacy:accessibilitystyles_fontsizeclass', 'theme_moove', $fontsize)
+                    get_string('privacy:accessibilitystyles_fontsizeclass', 'theme_luuniensuki', $fontsize)
                 );
             }
 
             $sitecolor = get_user_preferences(self::SITECOLOR, null, $userid);
             if (isset($sitecolor)) {
                 writer::export_user_preference(
-                    'theme_moove',
+                    'theme_luuniensuki',
                     self::SITECOLOR,
                     $sitecolor,
-                    get_string('privacy:accessibilitystyles_sitecolorclass', 'theme_moove', $sitecolor)
+                    get_string('privacy:accessibilitystyles_sitecolorclass', 'theme_luuniensuki', $sitecolor)
                 );
             }
         }
@@ -104,10 +104,10 @@ class provider implements
         $fonttype = get_user_preferences(self::FONTTYPE, null, $userid);
         if (isset($fonttype)) {
             writer::export_user_preference(
-                'theme_moove',
+                'theme_luuniensuki',
                 self::FONTTYPE,
                 $fonttype,
-                get_string('privacy:themeluuniensukisettings_fonttype', 'theme_moove', $fonttype)
+                get_string('privacy:themeluuniensukisettings_fonttype', 'theme_luuniensuki', $fonttype)
             );
         }
     }

@@ -21,7 +21,7 @@ use navigation_node;
 use moodle_url;
 use action_link;
 use core\lang_string;
-use theme_moove\util\settings;
+use theme_luuniensuki\util\settings;
 
 /**
  * Creates a navbar for boost that allows easy control of the navbar items.

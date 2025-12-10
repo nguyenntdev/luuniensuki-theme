@@ -28,8 +28,8 @@ use theme_config;
 use core\context\course as context_course;
 use moodle_url;
 use html_writer;
-use theme_moove\output\core_course\activity_navigation;
-use theme_moove\util\settings;
+use theme_luuniensuki\output\core_course\activity_navigation;
+use theme_luuniensuki\util\settings;
 
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
@@ -533,7 +533,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string the HTML for the navbar.
      */
     public function navbar(): string {
-        $newnav = new \theme_moove\output\boostnavbar($this->page);
+        $newnav = new \theme_luuniensuki\output\boostnavbar($this->page);
         return $this->render_from_template('core/navbar', $newnav);
     }
 

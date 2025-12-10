@@ -29,7 +29,7 @@ use moodle_url;
 use html_writer;
 use coursecat_helper;
 use core_course_list_element;
-use theme_moove\util\course;
+use theme_luuniensuki\util\course;
 use core\lang_string;
 
 /**
