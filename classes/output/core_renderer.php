@@ -556,16 +556,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Dark mode controls html content.
      */
     public function render_darkmode_controls() {
-        if (!isloggedin() || isguestuser()) {
-            return '';
-        }
-
-        $settings = new settings();
-
-        if (!$settings->enabledarkmode) {
-            return '';
-        }
-
-        return $this->render_from_template('theme_luuniensuki/luuniensuki/darkmode', []);
+        return '';
     }
 }
