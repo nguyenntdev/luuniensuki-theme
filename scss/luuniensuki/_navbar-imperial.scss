@@ -175,7 +175,10 @@
     border-bottom: 1px solid rgba($imperial-gold, 0.2) !important;
     padding: 0.5rem 0 !important;
     padding-bottom: 0.5rem !important;
-    margin: 0 !important;
+    // Margin: top spacing for separation from main navbar, left/right auto for centering
+    margin-top: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     margin-bottom: 0 !important;
     min-height: 60px !important;
 
@@ -253,7 +256,7 @@
         opacity: 1 !important;
         height: auto !important;
         padding: 0.5rem 0 !important;
-        margin: 0 !important;
+        // No margin override here - inherit from parent
     }
 }
 
@@ -267,6 +270,10 @@ div.secondary-navigation,
     background: $deep-navy !important;
     background-color: $deep-navy !important;
     padding-bottom: 0.5rem !important;
+    // Consistent margin with main .secondary-navigation selector
+    margin-top: 15px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     margin-bottom: 0 !important;
     display: block !important;
     visibility: visible !important;
