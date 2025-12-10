@@ -170,8 +170,8 @@
 
 // Secondary Navigation - Dark theme consistent - FORCE DEEP NAVY BACKGROUND
 .secondary-navigation {
-    background: $navy-lighter !important;
-    background-color: $navy-lighter !important;
+    background: $deep-navy !important;
+    background-color: $deep-navy !important;
     border-bottom: 1px solid rgba($imperial-gold, 0.3) !important;
     padding: 1rem 0 !important;
     padding-top: 1rem !important;
@@ -241,20 +241,20 @@
     .container-lg,
     .container-xl,
     .container-xxl {
-        background: $navy-lighter !important;
-        background-color: $navy-lighter !important;
+        background: $deep-navy !important;
+        background-color: $deep-navy !important;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
         height: auto !important;
     }
 
-    // Force nav element to have correct background
+    // Force nav element to have dark background
     nav,
     .navigation,
     .moremenu {
-        background: $navy-lighter !important;
-        background-color: $navy-lighter !important;
+        background: $deep-navy !important;
+        background-color: $deep-navy !important;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
@@ -274,7 +274,7 @@
         // Nav tabs inside
         .nav-tabs,
         .moremenu {
-            background: $navy-lighter !important;
+            background: $deep-navy !important;
         }
 
         .nav-link {
@@ -295,8 +295,8 @@ nav.secondary-navigation,
 div.secondary-navigation,
 .secondary-navigation.d-print-none,
 .secondary-navigation.moove {
-    background: $navy-lighter !important;
-    background-color: $navy-lighter !important;
+    background: $deep-navy !important;
+    background-color: $deep-navy !important;
     padding: 1rem 0 !important;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
