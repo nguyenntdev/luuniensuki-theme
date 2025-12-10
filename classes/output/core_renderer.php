@@ -121,14 +121,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $additionalclasses[] = $fonttype;
         }
 
-        $colormode = 'light';
-
-        $settings = new settings();
-        $darkmode = get_user_preferences('dark-mode-on', true);
-        if ($settings->enabledarkmode && $darkmode) {
-            $additionalclasses[] = 'moove-darkmode';
-            $colormode = 'dark';
-        }
+        $colormode = 'dark';
 
         if (!is_array($additionalclasses)) {
             $additionalclasses = explode(' ', $additionalclasses);
