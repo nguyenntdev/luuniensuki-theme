@@ -100,6 +100,48 @@
     }
 }
 
+// Primary navigation - Force white text color on all elements
+.navbar.fixed-top {
+    .primary-navigation {
+        .nav-link {
+            color: #fff !important;
+
+            span,
+            i,
+            svg,
+            * {
+                color: #fff !important;
+            }
+
+            &:hover {
+                color: $imperial-gold !important;
+
+                span,
+                i,
+                svg,
+                * {
+                    color: $imperial-gold !important;
+                }
+            }
+        }
+    }
+
+    // User menu and other navbar elements
+    .usermenu,
+    .popover-region,
+    .navbar-nav {
+        color: #fff !important;
+
+        a,
+        button,
+        span,
+        i,
+        svg {
+            color: #fff !important;
+        }
+    }
+}
+
 // Dropdown Menu
 .dropdown-menu {
     background: rgba($deep-navy, 0.95);
@@ -197,7 +239,7 @@
     }
 }
 
-// Also target any Moodle-specific secondary navigation variants
+// Also target any Moodle-specific secondary navigation variants - Override Bootstrap .d-print-none
 nav.secondary-navigation,
 .navbar.secondary-navigation,
 #page-header .secondary-navigation,
@@ -208,6 +250,13 @@ div.secondary-navigation,
     background-color: $deep-navy !important;
     padding-bottom: 0.5rem !important;
     margin-bottom: 0 !important;
+    display: block !important;
+    visibility: visible !important;
+}
+
+// Force override Bootstrap's .d-print-none utility class on secondary nav
+.d-print-none.secondary-navigation {
+    display: block !important;
 }
 
 // Fix body margin when secondary navigation is present
