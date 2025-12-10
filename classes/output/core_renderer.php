@@ -62,7 +62,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
                                     gtag('config', 'GOOGLE-ANALYTICS-CODE');
                                 </script>";
 
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('luuniensuki');
 
         if (!empty($theme->settings->googleanalytics)) {
             $output .= str_replace("GOOGLE-ANALYTICS-CODE", trim($theme->settings->googleanalytics), $googleanalyticscode);
@@ -309,7 +309,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function favicon() {
         global $CFG;
 
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('luuniensuki');
 
         $favicon = $theme->setting_file_url('favicon', 'favicon');
 
