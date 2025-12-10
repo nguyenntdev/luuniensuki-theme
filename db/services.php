@@ -54,14 +54,6 @@ $functions = [
         'type' => 'read',
         'ajax' => true,
     ],
-    'theme_luuniensuki_toggledarkmode' => [
-        'classname' => 'theme_luuniensuki\api\darkmode',
-        'classpath' => 'theme_luuniensuki/classes/api/darkmode.php',
-        'methodname' => 'toggledarkmode',
-        'description' => 'Toogle dark mode.',
-        'type' => 'write',
-        'ajax' => true,
-    ],
     'theme_luuniensuki_get_my_learning' => [
         'classname' => 'theme_luuniensuki\api\mylearning',
         'classpath' => 'theme/luuniensuki/classes/api/mylearning.php',
