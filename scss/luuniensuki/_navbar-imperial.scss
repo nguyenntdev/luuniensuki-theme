@@ -177,17 +177,22 @@
     padding-bottom: 0.5rem !important;
     margin: 0 !important;
     margin-bottom: 0 !important;
+    min-height: 60px !important;
 
     // Override fixed positioning from base _navbar.scss to prevent overlap with main navbar
-    position: static !important;
+    position: relative !important;
     top: auto !important;
+    z-index: 1020 !important;
 
-    // Force visibility
+    // Force visibility - Override any Moodle/Bootstrap hiding
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     height: auto !important;
     overflow: visible !important;
+    max-height: none !important;
+    clip: auto !important;
+    clip-path: none !important;
 
     // Hide if empty
     &:empty {
@@ -199,6 +204,7 @@
         visibility: visible !important;
         height: auto !important;
         overflow: visible !important;
+        opacity: 1 !important;
     }
 
     .nav-link {
@@ -207,6 +213,7 @@
         transition: $transition-smooth;
         display: flex !important;
         visibility: visible !important;
+        opacity: 1 !important;
 
         &:hover {
             color: $imperial-gold !important;
@@ -219,13 +226,20 @@
         }
     }
 
-    // Force container to have dark background
+    // Force all containers to be visible
     .moove-container-fluid,
-    .container-fluid {
+    .container-fluid,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
         background: $deep-navy !important;
         background-color: $deep-navy !important;
         display: block !important;
         visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
     }
 
     // Force nav element to have dark background
@@ -236,6 +250,10 @@
         background-color: $deep-navy !important;
         display: block !important;
         visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        padding: 0.5rem 0 !important;
+        margin: 0 !important;
     }
 }
 
@@ -252,11 +270,31 @@ div.secondary-navigation,
     margin-bottom: 0 !important;
     display: block !important;
     visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    position: relative !important;
+    z-index: 1020 !important;
+    overflow: visible !important;
 }
 
 // Force override Bootstrap's .d-print-none utility class on secondary nav
-.d-print-none.secondary-navigation {
+.d-print-none.secondary-navigation,
+div.secondary-navigation.d-print-none.moove,
+.d-print-none.secondary-navigation.moove {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+
+    // Also ensure child elements are visible
+    .moove-container-fluid,
+    nav,
+    .navigation,
+    .moremenu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 }
 
 // Fix body margin when secondary navigation is present
