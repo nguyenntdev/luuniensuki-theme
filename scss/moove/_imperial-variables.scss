@@ -36,6 +36,12 @@ $brand-primary: $imperial-gold !default;
 $body-bg: $deep-navy !default;
 $secondary-menu-color: $navy-lighter !default;
 
+// Bootstrap 5 dark mode overrides
+$enable-dark-mode: true !default;
+$body-bg-dark: $deep-navy !default;
+$body-color-dark: $foreground-primary !default;
+$border-color-dark: $border-color !default;
+
 // Text colors
 $text-color: $foreground-primary !default;
 $text-muted: $foreground-muted !default;
