@@ -170,17 +170,18 @@
 
 // Secondary Navigation - Dark theme consistent - FORCE DEEP NAVY BACKGROUND
 .secondary-navigation {
-    background: $deep-navy !important;
-    background-color: $deep-navy !important;
-    border-bottom: 1px solid rgba($imperial-gold, 0.2) !important;
-    padding: 0.5rem 0 !important;
-    padding-bottom: 0.5rem !important;
+    background: $navy-lighter !important;
+    background-color: $navy-lighter !important;
+    border-bottom: 1px solid rgba($imperial-gold, 0.3) !important;
+    padding: 1rem 0 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
     // Margin: top spacing for separation from main navbar, left/right auto for centering
     margin-top: 15px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 0 !important;
-    min-height: 60px !important;
+    min-height: 70px !important;
 
     // Override fixed positioning from base _navbar.scss to prevent overlap with main navbar
     position: relative !important;
@@ -211,21 +212,24 @@
     }
 
     .nav-link {
-        color: $foreground-primary !important;
+        color: $imperial-gold-light !important;
         font-weight: $font-weight-semibold;
         transition: $transition-smooth;
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
+        padding: 0.75rem 1.25rem !important;
 
         &:hover {
             color: $imperial-gold !important;
+            background: rgba($imperial-gold, 0.1) !important;
             transform: translateY(-2px);
         }
 
         &.active {
             color: $imperial-gold !important;
-            border-bottom: 2px solid #C4A35A;
+            background: rgba($imperial-gold, 0.15) !important;
+            border-bottom: 3px solid $imperial-gold !important;
         }
     }
 
@@ -237,30 +241,50 @@
     .container-lg,
     .container-xl,
     .container-xxl {
-        background: $deep-navy !important;
-        background-color: $deep-navy !important;
+        background: $navy-lighter !important;
+        background-color: $navy-lighter !important;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
         height: auto !important;
     }
 
-    // Force nav element to have dark background
+    // Force nav element to have correct background
     nav,
     .navigation,
     .moremenu {
-        background: $deep-navy !important;
-        background-color: $deep-navy !important;
+        background: $navy-lighter !important;
+        background-color: $navy-lighter !important;
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
         height: auto !important;
-        padding: 0.5rem 0 !important;
-        // Add proper margin for .navigation
-        margin-top: 15px !important;
+        // Increased padding for more spacing
+        padding: 1rem 0.5rem !important;
+        padding-top: 25px !important;
+        // Margin adjustments
+        margin-top: 0 !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         margin-bottom: 0 !important;
+
+        // Ensure text color
+        color: $imperial-gold-light !important;
+
+        // Nav tabs inside
+        .nav-tabs,
+        .moremenu {
+            background: $navy-lighter !important;
+        }
+
+        .nav-link {
+            color: $imperial-gold-light !important;
+
+            &:hover {
+                color: $imperial-gold !important;
+                background: rgba($imperial-gold, 0.1) !important;
+            }
+        }
     }
 }
 
@@ -271,9 +295,11 @@ nav.secondary-navigation,
 div.secondary-navigation,
 .secondary-navigation.d-print-none,
 .secondary-navigation.moove {
-    background: $deep-navy !important;
-    background-color: $deep-navy !important;
-    padding-bottom: 0.5rem !important;
+    background: $navy-lighter !important;
+    background-color: $navy-lighter !important;
+    padding: 1rem 0 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
     // Consistent margin with main .secondary-navigation selector
     margin-top: 15px !important;
     margin-left: auto !important;
