@@ -17,12 +17,12 @@
 /**
  * Overriden theme boost core renderer.
  *
- * @package    theme_moove
+ * @package    theme_luuniensuki
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\output;
+namespace theme_luuniensuki\output;
 
 use theme_config;
 use core\context\course as context_course;
@@ -34,7 +34,7 @@ use theme_moove\util\settings;
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_moove
+ * @package    theme_luuniensuki
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -73,10 +73,10 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         // Imperial theme: preload self-hosted fonts
         if ($themepreset === 'imperial') {
-            $output .= '<link rel="preload" href="' . $CFG->wwwroot . '/theme/moove/fonts/imperial/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-                       <link rel="preload" href="' . $CFG->wwwroot . '/theme/moove/fonts/imperial/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
-                       <link rel="preload" href="' . $CFG->wwwroot . '/theme/moove/fonts/imperial/fonts.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">
-                       <noscript><link rel="stylesheet" href="' . $CFG->wwwroot . '/theme/moove/fonts/imperial/fonts.css"></noscript>';
+            $output .= '<link rel="preload" href="' . $CFG->wwwroot . '/theme/luuniensuki/fonts/imperial/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+                       <link rel="preload" href="' . $CFG->wwwroot . '/theme/luuniensuki/fonts/imperial/playfair-latin.woff2" as="font" type="font/woff2" crossorigin>
+                       <link rel="preload" href="' . $CFG->wwwroot . '/theme/luuniensuki/fonts/imperial/fonts.css" as="style" onload="this.onload=null;this.rel=\'stylesheet\'">
+                       <noscript><link rel="stylesheet" href="' . $CFG->wwwroot . '/theme/luuniensuki/fonts/imperial/fonts.css"></noscript>';
         } else if ($sitefont != 'Moodle') {
             // Classic theme: load Google Fonts
             $output .= '<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -523,7 +523,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         $output .= $this->notification($message, $messagetype);
 
-        $output .= $this->render_from_template('theme_moove/loading-overlay', ['encodedurl' => $encodedurl]);
+        $output .= $this->render_from_template('theme_luuniensuki/loading-overlay', ['encodedurl' => $encodedurl]);
 
         if ($debugdisableredirect) {
             $output .= '<p><strong>' . get_string('erroroutput', 'error') . '</strong></p>';
@@ -554,7 +554,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             return '';
         }
 
-        return $this->render_from_template('theme_moove/moove/mylearning', []);
+        return $this->render_from_template('theme_luuniensuki/luuniensuki/mylearning', []);
     }
 
     /**
@@ -573,6 +573,6 @@ class core_renderer extends \theme_boost\output\core_renderer {
             return '';
         }
 
-        return $this->render_from_template('theme_moove/moove/darkmode', []);
+        return $this->render_from_template('theme_luuniensuki/luuniensuki/darkmode', []);
     }
 }

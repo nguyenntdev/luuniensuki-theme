@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace theme_moove\output;
+namespace theme_luuniensuki\output;
 
 use core\navigation\views\view;
 use navigation_node;
@@ -26,7 +26,7 @@ use theme_moove\util\settings;
 /**
  * Creates a navbar for boost that allows easy control of the navbar items.
  *
- * @package    theme_moove
+ * @package    theme_luuniensuki
  * @copyright  2021 Adrian Greeve <adrian@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

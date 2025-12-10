@@ -61,7 +61,7 @@ class theme_moove_core_h5p_renderer extends \core_h5p\output\renderer {
 
         return \moodle_url::make_file_url(
             "$CFG->wwwroot/pluginfile.php",
-            "/$syscontext->id/theme_moove/hvp/$itemid/themehvp.css"
+            "/$syscontext->id/theme_luuniensuki/hvp/$itemid/themehvp.css"
         );
     }
 }

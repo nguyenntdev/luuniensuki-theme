@@ -17,12 +17,12 @@
 /**
  * Privacy provider
  *
- * @package    theme_moove
+ * @package    theme_luuniensuki
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\privacy;
+namespace theme_luuniensuki\privacy;
 
 use core_privacy\local\metadata\collection;
 use core_privacy\local\metadata\provider as baseprovider;
@@ -32,7 +32,7 @@ use core_privacy\local\request\writer;
 /**
  * Privacy provider class
  *
- * @package    theme_moove
+ * @package    theme_luuniensuki
  * @copyright  2022 Willian Mano {@link https://conecti.me}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -46,9 +46,9 @@ class provider implements
     /** The user preference for the site color. */
     const SITECOLOR = 'accessibilitystyles_sitecolorclass';
     /** The user preference for the font type. */
-    const FONTTYPE = 'thememoovesettings_fonttype';
+    const FONTTYPE = 'themeluuniensukisettings_fonttype';
     /** The user preference for the enable accessibility toolbar. */
-    const TOOLBAR = 'thememoovesettings_enableaccessibilitytoolbar';
+    const TOOLBAR = 'themeluuniensukisettings_enableaccessibilitytoolbar';
 
     /**
      * Returns meta data about this system.
@@ -59,8 +59,8 @@ class provider implements
     public static function get_metadata(collection $items): collection {
         $items->add_user_preference(self::FONTSIZE, 'privacy:metadata:preference:accessibilitystyles_fontsizeclass');
         $items->add_user_preference(self::SITECOLOR, 'privacy:metadata:preference:accessibilitystyles_sitecolorclass');
-        $items->add_user_preference(self::FONTTYPE, 'privacy:metadata:preference:thememoovesettings_fonttype');
-        $items->add_user_preference(self::TOOLBAR, 'privacy:metadata:preference:thememoovesettings_enableaccessibilitytoolbar');
+        $items->add_user_preference(self::FONTTYPE, 'privacy:metadata:preference:themeluuniensukisettings_fonttype');
+        $items->add_user_preference(self::TOOLBAR, 'privacy:metadata:preference:themeluuniensukisettings_enableaccessibilitytoolbar');
         return $items;
     }
 
@@ -77,7 +77,7 @@ class provider implements
                 'theme_moove',
                 self::TOOLBAR,
                 $toolbar,
-                get_string('privacy:thememoovesettings_enableaccessibilitytoolbar', 'theme_moove', $toolbar)
+                get_string('privacy:themeluuniensukisettings_enableaccessibilitytoolbar', 'theme_moove', $toolbar)
             );
 
             $fontsize = get_user_preferences(self::FONTSIZE, null, $userid);
@@ -107,7 +107,7 @@ class provider implements
                 'theme_moove',
                 self::FONTTYPE,
                 $fonttype,
-                get_string('privacy:thememoovesettings_fonttype', 'theme_moove', $fonttype)
+                get_string('privacy:themeluuniensukisettings_fonttype', 'theme_moove', $fonttype)
             );
         }
     }

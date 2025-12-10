@@ -23,7 +23,7 @@
 }
 
 .path-mod .activity-header:not(:empty) {
-    background-color: var(--moove-gray-bg);
+    background-color: var(--luuniensuki-gray-bg);
 }
 
 .path-mod .activity-header .badge {
@@ -31,11 +31,11 @@
 }
 
 .modchoosercontent .optionscontainer .option:not(.selected):hover {
-    background-color: var(--moove-bg-white);
+    background-color: var(--luuniensuki-bg-white);
 }
 
 .modchoosercontent .optionscontainer .option.selected {
-    background-color: var(--moove-bg-white);
+    background-color: var(--luuniensuki-bg-white);
     border: var(--bs-border-color);
 }
 

@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-namespace theme_moove\api;
+namespace theme_luuniensuki\api;
 
 use core_external\external_api;
 use core_external\external_value;
@@ -24,7 +24,7 @@ use core_external\external_function_parameters;
 /**
  * MyLearning external api class.
  *
- * @package    theme_moove
+ * @package    theme_luuniensuki
  * @copyright  2020 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */

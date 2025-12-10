@@ -23,7 +23,7 @@ define(['jquery', 'core/str', 'core/ajax'], function($, Str, Ajax) {
 
     var SELECTORS = {
         TRIGGER: '#toggle-darkmode-input',
-        MODECLASS: 'moove-darkmode'
+        MODECLASS: 'luuniensuki-darkmode'
     };
 
     var ISACTIVATED = false;
@@ -60,7 +60,7 @@ define(['jquery', 'core/str', 'core/ajax'], function($, Str, Ajax) {
         ISACTIVATED = !ISACTIVATED;
 
         var request = Ajax.call([{
-            methodname: 'theme_moove_toggledarkmode',
+            methodname: 'theme_luuniensuki_toggledarkmode',
             args: {}
         }]);
 

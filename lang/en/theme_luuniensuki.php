@@ -17,23 +17,23 @@
 /**
  * Language file.
  *
- * @package   theme_moove
- * @copyright 2017 Willian Mano - http://conecti.me
+ * @package   theme_luuniensuki
+ * @copyright 2025 Lưu Niên Sử Kí Project
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Moove';
-$string['configtitle'] = 'Moove';
-$string['choosereadme'] = 'Moove is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
+$string['pluginname'] = 'Luuniensuki - Imperial Vietnamese Heritage';
+$string['configtitle'] = 'Luuniensuki';
+$string['choosereadme'] = 'Luuniensuki is a modern highly-customisable theme inspired by Imperial Vietnamese heritage. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
 
 $string['currentinparentheses'] = '(current)';
 $string['region-side-pre'] = 'Right';
 $string['prev_section'] = 'Previous section';
 $string['next_section'] = 'Next section';
-$string['themedevelopedby'] = 'This theme was proudly developed by';
-$string['themedevelopedbyconectimepartner'] = 'a Brazilian Moodle Partner Company.';
+$string['themedevelopedby'] = 'This theme was developed by';
+$string['themedevelopedbyconectimepartner'] = 'the Lưu Niên Sử Kí Project.';
 $string['needsupport'] = 'Need support for your Moodle site? ';
 $string['pleasuretohelp'] = 'It will be a pleasure to help you!';
 $string['access'] = 'Access';
@@ -53,8 +53,8 @@ $string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.
 $string['presetfiles'] = 'Additional theme preset files';
 $string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href="https://docs.moodle.org/dev/Boost_Presets">Boost presets</a> for information on creating and sharing your own preset files.';
 $string['themepreset'] = 'Theme style preset';
-$string['themepreset_desc'] = 'Choose between Classic Moove or Imperial Vietnamese Heritage theme style.';
-$string['themepreset_classic'] = 'Classic Moove';
+$string['themepreset_desc'] = 'Choose between Classic or Imperial Vietnamese Heritage theme style.';
+$string['themepreset_classic'] = 'Classic';
 $string['themepreset_imperial'] = 'Imperial Vietnamese Heritage (Lưu Niên Sử Kí)';
 $string['loginbgimg'] = 'Login page background';
 $string['loginbgimg_desc'] = 'Upload your custom background image for the login page.';
@@ -182,13 +182,13 @@ $string['accessibility:sitecolor4'] = 'High contrast';
 // Data privacy.
 $string['privacy:metadata:preference:accessibilitystyles_fontsizeclass'] = 'The user\'s preference for font size.';
 $string['privacy:metadata:preference:accessibilitystyles_sitecolorclass'] = 'The user\'s preference for site color.';
-$string['privacy:metadata:preference:thememoovesettings_fonttype'] = 'The user\'s preference for font type.';
-$string['privacy:metadata:preference:thememoovesettings_enableaccessibilitytoolbar'] = 'The user\'s preference for enable the accessibility toolbar.';
+$string['privacy:metadata:preference:themeluuniensukisettings_fonttype'] = 'The user\'s preference for font type.';
+$string['privacy:metadata:preference:themeluuniensukisettings_enableaccessibilitytoolbar'] = 'The user\'s preference for enable the accessibility toolbar.';
 
 $string['privacy:accessibilitystyles_fontsizeclass'] = 'The current preference for the font size is: {$a}.';
 $string['privacy:accessibilitystyles_sitecolorclass'] = 'The current preference for the site color is: {$a}.';
-$string['privacy:thememoovesettings_fonttype'] = 'The current preference for the font type is: {$a}.';
-$string['privacy:thememoovesettings_enableaccessibilitytoolbar'] = 'The current preference for enable accessibility toolbar is to show it.';
+$string['privacy:themeluuniensukisettings_fonttype'] = 'The current preference for the font type is: {$a}.';
+$string['privacy:themeluuniensukisettings_enableaccessibilitytoolbar'] = 'The current preference for enable accessibility toolbar is to show it.';
 
 $string['redirectmessage'] = 'This page should automatically redirect.';
 $string['redirectbtntext'] = 'If nothing is happening please click here to continue.';

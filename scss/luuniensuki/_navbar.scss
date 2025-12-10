@@ -9,7 +9,7 @@
 .navbar.fixed-top {
     border: none;
     height: 70px;
-    background-color: var(--moove-navbar-bg-color);
+    background-color: var(--luuniensuki-navbar-bg-color);
 
     .primary-navigation {
         .navigation {
@@ -40,7 +40,7 @@
     padding-top: 0;
     padding-bottom: 0;
     z-index: 1021;
-    background-color: var(--moove-secondary-navigation-bg-color);
+    background-color: var(--luuniensuki-secondary-navigation-bg-color);
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
     position: fixed;
     top: 70px;
@@ -125,14 +125,14 @@ body[data-bs-theme="dark"] {
     .popover-region-container {
         @extend .scale-up;
         top: 70px;
-        background-color: var(--moove-bg-white);
+        background-color: var(--luuniensuki-bg-white);
         border: var(--bs-border-color);
 
         .popover-region-header-container {
             height: 50px;
             padding: 11px 20px 15px;
             border-bottom: 1px solid var(--bs-border-color);
-            background-color: var(--moove-gray-bg);
+            background-color: var(--luuniensuki-gray-bg);
         }
 
         .popover-region-content-container {
@@ -140,16 +140,16 @@ body[data-bs-theme="dark"] {
 
             .content-item-container {
                 line-height: initial;
-                background-color: var(--moove-bg-white);
+                background-color: var(--luuniensuki-bg-white);
                 padding: 15px;
                 border-bottom: 1px solid var(--bs-border-color);
 
                 &.unread {
-                    background-color: var(--moove-bg-white);
+                    background-color: var(--luuniensuki-bg-white);
                 }
 
                 &:hover {
-                    background-color: var(--moove-bg-white);
+                    background-color: var(--luuniensuki-bg-white);
                     color: inherit;
 
                     .content-item-footer .timestamp {
@@ -235,7 +235,7 @@ body[data-bs-theme="dark"] {
     }
 
     .content-item-container.mylearning:hover {
-        background-color: var(--moove-gray-bg) !important;
+        background-color: var(--luuniensuki-gray-bg) !important;
         color: inherit;
     }
 

@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moove.
+ * Luuniensuki - Imperial Vietnamese Heritage Theme.
  *
- * @package    theme_moove
- * @copyright  2022 Willian Mano - https://conecti.me
+ * @package    theme_luuniensuki
+ * @copyright  2025 Lưu Niên Sử Kí Project
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -27,16 +27,16 @@ defined('MOODLE_INTERNAL') || die();
 
 // This is the component name of the plugin - it always starts with 'theme_'
 // for themes and should be the same as the name of the folder.
-$plugin->component = 'theme_moove';
+$plugin->component = 'theme_luuniensuki';
 
 // This is the version of the plugin.
-$plugin->version = 2025093001;
+$plugin->version = 2025121001;
 
 // This is the named version.
-$plugin->release = '5.1.2';
+$plugin->release = '0.0.1-alpha';
 
-// This is a stable release.
-$plugin->maturity = MATURITY_STABLE;
+// This is an alpha release.
+$plugin->maturity = MATURITY_ALPHA;
 
 // This is the version of Moodle this plugin requires.
 $plugin->requires = 2025092600;

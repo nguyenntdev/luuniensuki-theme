@@ -1,35 +1,31 @@
-Moodle "Moove" theme repository
-===============================
+# Luuniensuki - Imperial Vietnamese Heritage Moodle Theme
 
-Moove is Moodle's theme that makes online environments more clean and intuitive for learners and educators. Its intuitive layout is optimised for online learning, focusing on the things that matter - your learning activities and content.
+[\![Moodle](https://img.shields.io/badge/Moodle-4.0%2B-orange.svg)](https://moodle.org/)
+[\![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[\![Version](https://img.shields.io/badge/version-0.0.1--alpha-red.svg)](https://github.com)
 
-Moove is built on Boostrap4 and Mustache templates.
+## Overview
 
-Documentation
-=============
+**Luuniensuki** (Lưu Niên Sử Kí) is a modern, highly-customizable Moodle theme inspired by Imperial Vietnamese heritage.
 
-You can see the theme documentation on: https://github.com/willianmano/moodle-theme_moove/wiki
+## Version
 
-Developed and maintained by
-===========================
-Willian Mano
- - Zend Certified PHP Engineer - ZEND028770
- - Certified Scrum Master - 000570341
- - iMasters Certified Professional - PHP - Good Practices - 1076
+- **Current Version**: 0.0.1-alpha
+- **Maturity**: Alpha Release  
+- **Moodle Compatibility**: 4.0+
 
-Moodle profile: https://moodle.org/user/profile.php?id=968235
+## Features
 
-Linkedin: https://www.linkedin.com/in/willianmano
+- 🌙 **Dark Mode by Default** - Elegant dark theme with Imperial Gold accents
+- 🎨 **Imperial Color System** - HSL-based colors inspired by Vietnamese royal heritage
+- ♿ **Accessibility Features** - Enhanced font controls, dyslexic font support
+- 🎭 **Dual Theme Modes** - Classic or Imperial Vietnamese Heritage style
+- 📱 **Responsive Design** - Optimized for all devices
 
-Installation
-------------
+## License
 
-**First way**
-- Clone this repository into the folder theme.
-- Access the notification area in moodle and install
+GNU General Public License v3.0 or later. See LICENSE.md for details.
 
-**Second way**
-- Download this repository
-- Extract the content
-- Put the folder into the folder theme of your moodle
-- Access the notification area in moodle and install
+---
+
+**Lưu Niên Sử Kí** - Preserving Heritage Through Education

@@ -11,7 +11,7 @@
         margin-top: 0;
         margin-bottom: 2rem;
         padding: 1.5rem;
-        background-color: var(--moove-bg-white);
+        background-color: var(--luuniensuki-bg-white);
     }
 
     &.show-drawer-left {
@@ -55,7 +55,7 @@
 }
 
 #region-main {
-    background-color: var(--moove-bg-white);
+    background-color: var(--luuniensuki-bg-white);
 }
 
 .drawer-toggles .drawer-toggler {
@@ -80,11 +80,11 @@ body.has-secondarynavigation {
 }
 
 .drawer {
-    background-color: var(--moove-bg-white);
+    background-color: var(--luuniensuki-bg-white);
 }
 
 .message-app {
-    background-color: var(--moove-bg-white);
+    background-color: var(--luuniensuki-bg-white);
 
     .closewidget .text-dark {
         color: var(--bs-btn-color) !important;
@@ -97,7 +97,7 @@ body.has-secondarynavigation {
 
     .footer-container {
         padding: .5rem 0;
-        background-color: var(--moove-gray-bg);
+        background-color: var(--luuniensuki-gray-bg);
     }
 }
 

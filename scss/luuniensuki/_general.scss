@@ -55,7 +55,7 @@ body {
 
 a {
     transition: all 0.25s ease-out;
-    color: var(--moove-link-color);
+    color: var(--luuniensuki-link-color);
 }
 
 .dropdown-item:active,
@@ -84,32 +84,32 @@ body[data-bs-theme="dark"] {
 
 .bg-light {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--moove-gray-bg), var(--bs-bg-opacity)) !important;
+    background-color: rgba(var(--luuniensuki-gray-bg), var(--bs-bg-opacity)) !important;
 }
 
 .bg-white {
-    background-color: rgba(var(--moove-bg-white), var(--bs-bg-opacity)) !important;
+    background-color: rgba(var(--luuniensuki-bg-white), var(--bs-bg-opacity)) !important;
 }
 
 .moodle-dialogue-base .moodle-dialogue-wrap {
-    background-color: var(--moove-gray-bg);
+    background-color: var(--luuniensuki-gray-bg);
 
     .moodle-dialogue-bd {
-        background-color: var(--moove-bg-white);
+        background-color: var(--luuniensuki-bg-white);
     }
 }
 
 .jschooser .choosercontainer #chooseform .instruction,
 .jschooser .choosercontainer #chooseform .typesummary {
-    background-color: var(--moove-bg-white);
+    background-color: var(--luuniensuki-bg-white);
 }
 
 .choosercontainer #chooseform .submitbuttons {
-    background-color: var(--moove-gray-bg);
+    background-color: var(--luuniensuki-gray-bg);
 }
 
 .choosercontainer #chooseform .selected {
-    background-color: var(--moove-gray-bg);
+    background-color: var(--luuniensuki-gray-bg);
 }
 
 .loading-overlay {

@@ -17,12 +17,12 @@
 /**
  * Course renderer.
  *
- * @package    theme_moove
+ * @package    theme_luuniensuki
  * @copyright  2025 Willian Mano - willianmanoaraujo@gmail.com
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\output\core;
+namespace theme_luuniensuki\output\core;
 
 use stdClass;
 use moodle_url;
@@ -214,7 +214,7 @@ class course_renderer extends \core_course_renderer {
             'courseurl' => $this->get_course_url($course->id),
         ];
 
-        return $this->render_from_template('theme_moove/moove/coursecard', $data);
+        return $this->render_from_template('theme_luuniensuki/luuniensuki/coursecard', $data);
     }
 
     /**

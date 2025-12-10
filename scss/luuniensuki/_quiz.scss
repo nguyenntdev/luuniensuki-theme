@@ -42,7 +42,7 @@ body.path-mod-quiz {
         .state {
             margin: 0;
             padding: .35rem 1rem;
-            background-color: var(--moove-gray-bg);
+            background-color: var(--luuniensuki-gray-bg);
             border-radius: 12px;
             font-size: .75rem;
         }
@@ -165,17 +165,17 @@ body.path-mod-quiz {
 }
 
 #page-mod-quiz-edit ul.slots li.section .content {
-    background-color: var(--moove-gray-bg);
+    background-color: var(--luuniensuki-gray-bg);
 }
 
 body.cm-type-quiz {
     div[id^=fitem_id_][id*=answer_],
     div[id^=fitem_id_][id*=fraction_],
     div[id^=fitem_id_][id*=feedback_] {
-        background-color: var(--moove-gray-bg) !important;
+        background-color: var(--luuniensuki-gray-bg) !important;
     }
 }
 
 #page-question-edit table tbody {
-    background-color: var(--moove-gray-bg);
+    background-color: var(--luuniensuki-gray-bg);
 }

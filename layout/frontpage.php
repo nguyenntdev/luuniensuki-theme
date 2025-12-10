@@ -17,7 +17,7 @@
 /**
  * A drawer based layout for the Eskada theme.
  *
- * @package    theme_moove
+ * @package    theme_luuniensuki
  * @copyright  2025 Willian Mano - willianmanoaraujo@gmail.com
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -110,15 +110,15 @@ $templatecontext = [
     'addblockbutton' => $addblockbutton,
 ];
 
-$themesettings = new \theme_moove\util\settings();
+$themesettings = new \theme_luuniensuki\util\settings();
 
 $templatecontext = array_merge($templatecontext, $themesettings->footer());
 
-$template = 'theme_moove/drawers';
+$template = 'theme_luuniensuki/drawers';
 if (!isloggedin()) {
     $templatecontext = array_merge($templatecontext, $themesettings->frontpage());
 
-    $template = 'theme_moove/frontpage';
+    $template = 'theme_luuniensuki/frontpage';
 }
 
 echo $OUTPUT->render_from_template($template, $templatecontext);
