@@ -1,0 +1,68 @@
+// Imperial Theme - Accessibility Bar Overrides
+// Fix text color for dark theme
+
+#accessibilitybar {
+    display: none !important;
+    background-color: $deep-navy !important;
+    border-bottom: 1px solid rgba($imperial-gold, 0.2);
+
+    .bars {
+        ul {
+            li {
+                .btn {
+                    color: $foreground-primary !important;
+                    background-color: rgba($navy-lighter, 0.8);
+                    border: 1px solid rgba($imperial-gold, 0.3);
+                    
+                    &:hover {
+                        color: $imperial-gold !important;
+                        background-color: rgba($navy-lighter, 1);
+                        border-color: $imperial-gold;
+                    }
+                }
+            }
+        }
+
+        #sitecolor_color2 {
+            background-color: #ffffcc !important;
+            color: #000 !important;
+        }
+
+        #sitecolor_color3 {
+            background-color: #99ccff !important;
+            color: #000 !important;
+        }
+
+        #sitecolor_color4 {
+            color: #ffff00 !important;
+            background-color: #000000 !important;
+        }
+    }
+}
+
+body.hasaccessibilitybar {
+    #page,
+    #page.drawers {
+        margin-top: 100px !important;
+    }
+
+    .navbar.fixed-top {
+        top: 30px !important;
+    }
+
+    #accessibilitybar {
+        display: block !important;
+    }
+
+    .secondary-navigation.moove {
+        margin-top: 30px !important;
+    }
+}
+
+body.has-secondarynavigation.hasaccessibilitybar {
+    #page,
+    #page.drawers {
+        margin-top: 100px !important;
+    }
+}
+

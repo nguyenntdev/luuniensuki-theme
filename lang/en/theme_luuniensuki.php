@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname'] = 'Luuniensuki - Imperial Vietnamese Heritage';
-$string['configtitle'] = 'Luuniensuki';
+$string['pluginname'] = 'Lưu Niên Sử Kí';
+$string['configtitle'] = 'Lưu Niên Sử Kí';
 $string['choosereadme'] = 'Luuniensuki is a modern highly-customisable theme inspired by Imperial Vietnamese heritage. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
 
 $string['currentinparentheses'] = '(current)';

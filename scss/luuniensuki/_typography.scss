@@ -1,7 +1,7 @@
 // Imperial Vietnamese Heritage Typography System
 
-// Import self-hosted fonts
-@import url('../fonts/imperial/fonts.css');
+// Note: Font faces are loaded via HTML <link> tag in core_renderer.php
+// This avoids SCSS compilation issues with @import url()
 
 // Font Families
 $font-family-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;

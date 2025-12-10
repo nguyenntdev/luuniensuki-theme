@@ -1,0 +1,207 @@
+// Imperial Theme Navbar Enhancements
+
+// Main Navbar - Glass Morphism
+.navbar {
+    background: rgba($deep-navy, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba($imperial-gold, 0.1);
+    transition: $transition-smooth;
+    
+    &.scrolled {
+        background: rgba($deep-navy, 0.98);
+        box-shadow: $shadow-elegant;
+    }
+}
+
+// Navbar Brand/Logo
+.navbar-brand {
+    color: $imperial-gold;
+    font-family: $font-family-serif;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    transition: $transition-smooth;
+    
+    &:hover {
+        color: $imperial-gold-light;
+        text-shadow: 0 0 10px rgba($imperial-gold, 0.3);
+        transform: scale(1.05);
+    }
+    
+    img {
+        filter: drop-shadow(0 0 10px rgba($imperial-gold, 0.3));
+        transition: filter 0.3s ease;
+        
+        &:hover {
+            filter: drop-shadow(0 0 20px rgba($imperial-gold, 0.5));
+        }
+    }
+}
+
+// Navbar Links
+.navbar-nav {
+    .nav-link {
+        color: $navbar-text;
+        font-weight: $font-weight-medium;
+        padding: 0.75rem 1rem;
+        position: relative;
+        transition: $transition-smooth;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: $gradient-gold;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+        
+        &:hover {
+            color: $navbar-hover;
+            text-shadow: 0 0 10px rgba($imperial-gold, 0.2);
+            
+            &::after {
+                width: 80%;
+            }
+        }
+        
+        &.active {
+            color: $imperial-gold;
+            
+            &::after {
+                width: 80%;
+            }
+        }
+    }
+}
+
+// Dropdown Menu
+.dropdown-menu {
+    background: rgba($deep-navy, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba($imperial-gold, 0.2);
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-elegant;
+    
+    .dropdown-item {
+        color: $foreground-primary;
+        transition: $transition-smooth;
+        
+        &:hover {
+            background: rgba($imperial-gold, 0.1);
+            color: $imperial-gold;
+            padding-left: 1.5rem;
+        }
+        
+        &.active {
+            background: rgba($imperial-gold, 0.15);
+            color: $imperial-gold;
+        }
+    }
+}
+
+// Secondary Navigation - Dark theme consistent - FORCE DEEP NAVY BACKGROUND
+.secondary-navigation {
+    background: $deep-navy !important;
+    background-color: $deep-navy !important;
+    border-bottom: 1px solid rgba($imperial-gold, 0.2) !important;
+    padding: 0.5rem 0 !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+
+    // Hide if empty
+    &:empty {
+        display: none !important;
+    }
+
+    .nav-link {
+        color: $foreground-primary !important;
+        font-weight: $font-weight-semibold;
+        transition: $transition-smooth;
+
+        &:hover {
+            color: $imperial-gold !important;
+            transform: translateY(-2px);
+        }
+
+        &.active {
+            color: $imperial-gold !important;
+            border-bottom: 2px solid #C4A35A;
+        }
+    }
+
+    // Force container to have dark background
+    .moove-container-fluid,
+    .container-fluid {
+        background: $deep-navy !important;
+        background-color: $deep-navy !important;
+    }
+
+    // Force nav element to have dark background
+    nav,
+    .navigation,
+    .moremenu {
+        background: $deep-navy !important;
+        background-color: $deep-navy !important;
+    }
+}
+
+// Also target any Moodle-specific secondary navigation variants
+nav.secondary-navigation,
+.navbar.secondary-navigation,
+#page-header .secondary-navigation,
+div.secondary-navigation,
+.secondary-navigation.d-print-none,
+.secondary-navigation.moove {
+    background: $deep-navy !important;
+    background-color: $deep-navy !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+// User Menu
+.usermenu {
+    .dropdown-toggle {
+        color: $imperial-gold;
+        border: 1px solid rgba($imperial-gold, 0.3);
+        border-radius: $border-radius-md;
+        padding: 0.5rem 1rem;
+        transition: $transition-smooth;
+        
+        &:hover {
+            background: rgba($imperial-gold, 0.1);
+            border-color: $imperial-gold;
+        }
+    }
+    
+    .user-avatar {
+        border: 2px solid $imperial-gold;
+        border-radius: 50%;
+        transition: $transition-smooth;
+        
+        &:hover {
+            box-shadow: 0 0 15px rgba($imperial-gold, 0.5);
+        }
+    }
+}
+
+// Mobile Navbar Toggle
+.navbar-toggler {
+    border-color: rgba($imperial-gold, 0.3);
+    color: $imperial-gold;
+    
+    &:hover {
+        background: rgba($imperial-gold, 0.1);
+        border-color: $imperial-gold;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C4A35A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}
+

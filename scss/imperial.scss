@@ -4,6 +4,9 @@
 // Import imperial color variables
 @import "luuniensuki/imperial-variables";
 
+// Import base dark mode styles (must come after variables)
+@import "luuniensuki/base-imperial";
+
 // Import imperial gradients
 @import "luuniensuki/gradients";
 
@@ -29,4 +32,4 @@
 @import "luuniensuki/frontpage-imperial";
 @import "luuniensuki/navbar-imperial";
 @import "luuniensuki/drawers-imperial";
-
+@import "luuniensuki/accessibilitybar-imperial";

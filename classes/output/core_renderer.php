@@ -68,6 +68,8 @@ class core_renderer extends \theme_boost\output\core_renderer {
             $output .= str_replace("GOOGLE-ANALYTICS-CODE", trim($theme->settings->googleanalytics), $googleanalyticscode);
         }
 
+        global $CFG;
+
         $sitefont = isset($theme->settings->fontsite) ? $theme->settings->fontsite : 'Moodle';
         $themepreset = isset($theme->settings->themepreset) ? $theme->settings->themepreset : 'classic';
 

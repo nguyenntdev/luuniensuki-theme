@@ -1,0 +1,243 @@
+// Imperial Theme - Base Dark Mode Styles
+// Apply dark mode to all core Moodle elements
+
+// Body and main content
+body {
+    background-color: $deep-navy !important;
+    // Color is set by typography.scss, don't override
+}
+
+// Main content areas
+#page,
+#page-wrapper,
+.main-inner,
+#region-main,
+.region-main-box,
+.content-bank-container,
+.generaltable {
+    background-color: $deep-navy !important;
+    color: $foreground-primary !important;
+}
+
+// All white backgrounds to dark
+.bg-white,
+[class*="bg-white"] {
+    background-color: $navy-card !important;
+    color: $foreground-primary !important;
+}
+
+// Content sections
+.section,
+.section-modchooser,
+.activity,
+.activityinstance {
+    background-color: transparent !important;
+    color: $foreground-primary !important;
+}
+
+// Forms and inputs
+input,
+textarea,
+select,
+.form-control {
+    background-color: $input-bg !important;
+    color: $foreground-primary !important;
+    border-color: $border-color !important;
+    
+    &::placeholder {
+        color: $foreground-muted !important;
+    }
+    
+    &:focus {
+        background-color: $input-bg !important;
+        color: $foreground-primary !important;
+        border-color: $imperial-gold !important;
+        box-shadow: 0 0 0 0.2rem rgba($imperial-gold, 0.25) !important;
+    }
+}
+
+// Dropdowns and selects
+.dropdown-menu {
+    background-color: $navy-card !important;
+    border-color: $border-color !important;
+    
+    .dropdown-item {
+        color: $foreground-primary !important;
+        
+        &:hover,
+        &:focus {
+            background-color: rgba($imperial-gold, 0.1) !important;
+            color: $imperial-gold !important;
+        }
+    }
+}
+
+// Modals
+.modal-content {
+    background-color: $navy-card !important;
+    color: $foreground-primary !important;
+    border-color: $border-color !important;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: $border-color !important;
+}
+
+// Tables
+table,
+.table {
+    color: $foreground-primary !important;
+    
+    thead th {
+        background-color: $navy-lighter !important;
+        color: $imperial-gold !important;
+        border-color: $border-color !important;
+    }
+    
+    tbody tr {
+        background-color: transparent !important;
+        border-color: $border-color !important;
+        
+        &:hover {
+            background-color: rgba($imperial-gold, 0.05) !important;
+        }
+    }
+    
+    td, th {
+        border-color: $border-color !important;
+        color: $foreground-primary !important;
+    }
+}
+
+// Alerts and notifications
+.alert {
+    background-color: $navy-card !important;
+    border-color: $border-color !important;
+    color: $foreground-primary !important;
+}
+
+// Breadcrumbs
+.breadcrumb {
+    background-color: transparent !important;
+    
+    .breadcrumb-item {
+        color: $foreground-muted !important;
+        
+        a {
+            color: $imperial-gold !important;
+        }
+        
+        &.active {
+            color: $foreground-primary !important;
+        }
+    }
+}
+
+// Pagination
+.pagination {
+    .page-link {
+        background-color: $navy-card !important;
+        border-color: $border-color !important;
+        color: $imperial-gold !important;
+        
+        &:hover {
+            background-color: rgba($imperial-gold, 0.1) !important;
+            border-color: $imperial-gold !important;
+        }
+    }
+    
+    .page-item.active .page-link {
+        background-color: $imperial-gold !important;
+        border-color: $imperial-gold !important;
+        color: $deep-navy !important;
+    }
+}
+
+// File pickers and drag-drop areas
+.filemanager,
+.filepicker,
+.dndupload-target {
+    background-color: $navy-card !important;
+    border-color: $border-color !important;
+    color: $foreground-primary !important;
+}
+
+// Admin settings page
+.adminsettings {
+    background-color: $deep-navy !important;
+
+    .form-item,
+    .form-setting {
+        background-color: transparent !important;
+    }
+
+    .form-label {
+        color: $foreground-primary !important;
+    }
+
+    .form-description {
+        color: $foreground-muted !important;
+    }
+
+    // Color picker admin controls
+    .admin_colourpicker,
+    .form-colourpicker {
+        background-color: $input-bg !important;
+        border-color: $border-color !important;
+
+        input[type="text"] {
+            background-color: $input-bg !important;
+            color: $foreground-primary !important;
+        }
+    }
+
+    // Settings headings
+    h2, h3 {
+        color: $imperial-gold !important;
+        border-bottom-color: rgba($imperial-gold, 0.2) !important;
+    }
+}
+
+// Admin page header - Force dark backgrounds on ALL page header elements
+#page-header,
+.page-header,
+.page-header-headings,
+.page-context-header,
+[id*="page-header"],
+[class*="page-header"] {
+    background: $deep-navy !important;
+    background-color: $deep-navy !important;
+    color: $foreground-primary !important;
+}
+
+.page-header-headings {
+    h1 {
+        color: $imperial-gold !important;
+    }
+}
+
+// Page navbar (breadcrumb container) - Fix white bar issue
+#page-navbar,
+.page-navbar,
+[id*="page-navbar"],
+[class*="page-navbar"] {
+    background: $deep-navy !important;
+    background-color: $deep-navy !important;
+    color: $foreground-primary !important;
+    padding: 0.5rem 0 !important;
+}
+
+// Settings table
+.generaltable.admintable {
+    td, th {
+        background-color: $navy-card !important;
+        color: $foreground-primary !important;
+    }
+
+    th {
+        background-color: $navy-lighter !important;
+        color: $imperial-gold !important;
+    }
+}
+
