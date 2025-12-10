@@ -1,28 +1,27 @@
 // Imperial Theme: Dark mode is default
-:root,
-[data-bs-theme="dark"] {
+:root {
     // Imperial Vietnamese Heritage - Dark Mode (Default)
-    --moove-secondary-navigation-bg-color: #{$navy-lighter};
-    --moove-navbar-bg-color: #{$deep-navy};
-    --moove-bg-white: #{$navy-card};
-    --moove-link-color: #{$imperial-gold};
-    --moove-gray-bg: #{$deep-navy};
-    --moove-text-color: #{$foreground-primary};
-    --moove-border-color: #{$border-color};
-    --moove-card-bg: #{$navy-card};
+    --moove-secondary-navigation-bg-color: hsl(222, 35%, 12%);
+    --moove-navbar-bg-color: hsl(222, 47%, 6%);
+    --moove-bg-white: hsl(222, 40%, 8%);
+    --moove-link-color: hsl(43, 74%, 49%);
+    --moove-gray-bg: hsl(222, 47%, 6%);
+    --moove-text-color: hsl(43, 20%, 96%);
+    --moove-border-color: hsl(222, 30%, 18%);
+    --moove-card-bg: hsl(222, 40%, 8%);
 }
 
 @if $enable-dark-mode {
     @include color-mode(light) {
         // Light mode with warm ivory tones
-        --moove-secondary-navigation-bg-color: #{$imperial-gold};
-        --moove-navbar-bg-color: #{$ivory};
-        --moove-bg-white: #{$ivory};
-        --moove-link-color: #{$bronze};
+        --moove-secondary-navigation-bg-color: hsl(43, 74%, 49%);
+        --moove-navbar-bg-color: hsl(43, 30%, 92%);
+        --moove-bg-white: hsl(43, 30%, 92%);
+        --moove-link-color: hsl(25, 60%, 40%);
         --moove-gray-bg: hsl(43, 20%, 95%);
-        --moove-text-color: #{$deep-navy};
+        --moove-text-color: hsl(222, 47%, 6%);
         --moove-border-color: hsl(43, 20%, 85%);
-        --moove-card-bg: #{$white};
+        --moove-card-bg: hsl(0, 0%, 100%);
     }
 }
 
