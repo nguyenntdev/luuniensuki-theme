@@ -196,7 +196,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string
      */
     public function get_theme_logo_url() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('luuniensuki');
 
         return $theme->setting_file_url('logo', 'logo');
     }
@@ -207,7 +207,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string
      */
     public function get_theme_logo_dark_url() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('luuniensuki');
 
         return $theme->setting_file_url('logodark', 'logodark');
     }
