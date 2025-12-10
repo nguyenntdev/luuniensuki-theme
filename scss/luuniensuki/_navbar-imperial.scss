@@ -38,15 +38,23 @@
     }
 }
 
-// Navbar Links
+// Navbar Links - Force ivory/white text color
 .navbar-nav {
     .nav-link {
-        color: $navbar-text;
+        color: $navbar-text !important;
         font-weight: $font-weight-medium;
         padding: 0.75rem 1rem;
         position: relative;
         transition: $transition-smooth;
-        
+
+        // Target all child elements for consistent color
+        span,
+        i,
+        svg,
+        * {
+            color: $navbar-text !important;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -58,19 +66,33 @@
             transform: translateX(-50%);
             transition: width 0.3s ease;
         }
-        
+
         &:hover {
-            color: $navbar-hover;
+            color: $navbar-hover !important;
             text-shadow: 0 0 10px rgba($imperial-gold, 0.2);
-            
+
+            span,
+            i,
+            svg,
+            * {
+                color: $navbar-hover !important;
+            }
+
             &::after {
                 width: 80%;
             }
         }
-        
+
         &.active {
-            color: $imperial-gold;
-            
+            color: $imperial-gold !important;
+
+            span,
+            i,
+            svg,
+            * {
+                color: $imperial-gold !important;
+            }
+
             &::after {
                 width: 80%;
             }
@@ -104,25 +126,96 @@
     }
 }
 
-// Secondary Navigation
+// Secondary Navigation - Dark theme consistent - FORCE DEEP NAVY BACKGROUND
 .secondary-navigation {
-    background: $gradient-gold;
-    border-bottom: 2px solid $imperial-gold;
-    padding: 0.5rem 0;
-    
+    background: $deep-navy !important;
+    background-color: $deep-navy !important;
+    border-bottom: 1px solid rgba($imperial-gold, 0.2) !important;
+    padding: 0.5rem 0 !important;
+    padding-bottom: 0.5rem !important;
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+
+    // Override fixed positioning from base _navbar.scss to prevent overlap with main navbar
+    position: static !important;
+    top: auto !important;
+
+    // Force visibility
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+
+    // Hide if empty
+    &:empty {
+        display: none !important;
+    }
+
+    .nav-tabs {
+        display: flex !important;
+        visibility: visible !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
     .nav-link {
-        color: $deep-navy;
+        color: $foreground-primary !important;
         font-weight: $font-weight-semibold;
-        
+        transition: $transition-smooth;
+        display: flex !important;
+        visibility: visible !important;
+
         &:hover {
-            color: rgba($deep-navy, 0.8);
+            color: $imperial-gold !important;
             transform: translateY(-2px);
         }
-        
+
         &.active {
-            color: $deep-navy;
-            border-bottom: 2px solid $deep-navy;
+            color: $imperial-gold !important;
+            border-bottom: 2px solid #C4A35A;
         }
+    }
+
+    // Force container to have dark background
+    .moove-container-fluid,
+    .container-fluid {
+        background: $deep-navy !important;
+        background-color: $deep-navy !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+
+    // Force nav element to have dark background
+    nav,
+    .navigation,
+    .moremenu {
+        background: $deep-navy !important;
+        background-color: $deep-navy !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+}
+
+// Also target any Moodle-specific secondary navigation variants
+nav.secondary-navigation,
+.navbar.secondary-navigation,
+#page-header .secondary-navigation,
+div.secondary-navigation,
+.secondary-navigation.d-print-none,
+.secondary-navigation.moove {
+    background: $deep-navy !important;
+    background-color: $deep-navy !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: 0 !important;
+}
+
+// Fix body margin when secondary navigation is present
+// Since we're using position: static, we don't need the extra margin
+body.has-secondarynavigation {
+    #page,
+    #page.drawers {
+        margin-top: 70px !important; // Only navbar height, not navbar + secondary nav
     }
 }
 
