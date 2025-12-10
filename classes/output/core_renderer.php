@@ -124,7 +124,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $colormode = 'light';
 
         $settings = new settings();
-        $darkmode = get_user_preferences('dark-mode-on', '');
+        $darkmode = get_user_preferences('dark-mode-on', true);
         if ($settings->enabledarkmode && $darkmode) {
             $additionalclasses[] = 'moove-darkmode';
             $colormode = 'dark';

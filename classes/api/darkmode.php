@@ -56,9 +56,9 @@ class darkmode extends external_api {
      */
     public static function toggledarkmode() {
         if (isloggedin() && !isguestuser()) {
-            $darkmode = get_user_preferences('dark-mode-on', 'false');
-
-            set_user_preference('dark-mode-on', !$darkmode);
+            $darkmode = get_user_preferences('dark-mode-on', true);
+            $newvalue = !$darkmode;
+            set_user_preference('dark-mode-on', $newvalue);
         }
 
         return ['status' => 'ok'];
