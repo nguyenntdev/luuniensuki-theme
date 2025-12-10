@@ -70,6 +70,7 @@ if ($ADMIN->fulltree) {
     }
     // These are the built in presets.
     $choices['default.scss'] = 'default.scss';
+    $choices['imperial.scss'] = 'imperial.scss';
     $choices['plain.scss'] = 'plain.scss';
 
     $setting = new admin_setting_configselect($name, $title, $description, $default, $choices);
