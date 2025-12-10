@@ -1,7 +1,3 @@
-.navbar .navbar-brand .logo.dark {
-    display: none;
-}
-
 .navbar-nav .popover-region .popover-region-toggle .icon {
     font-weight: inherit;
 }
@@ -89,14 +85,6 @@
 }
 
 body[data-bs-theme="dark"] {
-    .navbar .navbar-brand .logo.light {
-        display: none;
-    }
-
-    .navbar .navbar-brand .logo.dark {
-        display: block;
-    }
-
     .primary-navigation .navigation .nav-link {
         color: $gray-300;
 
