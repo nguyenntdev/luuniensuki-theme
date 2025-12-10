@@ -6,7 +6,7 @@
 **Moodle Version**: 5.1.1 (Build: 20251208)
 **Theme Deployed**: luuniensuki (feature/imperial-theme branch)
 **Status**: ✅ Successfully deployed and operational
-**Last Update**: 2025-12-10 21:59 UTC - Secondary Navigation Bug Fix
+**Last Update**: 2025-12-10 - Secondary Navigation Styling Update
 
 ---
 
@@ -68,6 +68,51 @@ php admin/cli/purge_caches.php
 
 **Testing Status**: ✅ Deployed and ready for user verification
 - ✓ Site responding correctly
+
+### 7. ✅ Secondary Navigation Styling Update (2025-12-10)
+**Issue**: Need to increase padding and improve visual appearance of secondary navigation
+
+**Changes Implemented**:
+- Increased padding from `0.5rem` to `1rem` for better spacing
+- Changed background from `deep-navy` to `navy-lighter` (hsl(222, 35%, 12%))
+- Updated nav-link color from `foreground-primary` to `imperial-gold-light`
+- Added hover background effects: `rgba($imperial-gold, 0.1)`
+- Increased active border from `2px` to `3px` with `imperial-gold` color
+- Added padding to nav-link: `0.75rem 1.25rem`
+- Updated min-height from `60px` to `70px`
+- Border-bottom opacity increased from `0.2` to `0.3`
+
+**Files Modified**:
+- `scss/luuniensuki/_navbar-imperial.scss`
+
+**Deployment**:
+- ✅ Committed to git: `e51ce09`
+- ✅ Pushed to feature/imperial-theme branch
+- ✅ Deployed to production server: 47.236.61.220
+- ✅ Theme revision incremented
+- ✅ Cache purged successfully
+
+**Visual Changes**:
+- More prominent secondary navigation with better contrast
+- Improved hover states for better user interaction
+- Cleaner visual hierarchy between primary and secondary nav
+
+**Rollback Instructions** (if needed):
+```bash
+# On local machine
+cd /root/luuniensuki-theme
+git checkout e51ce09~1 -- scss/luuniensuki/_navbar-imperial.scss
+
+# Deploy to server
+sshpass -p "[G^('0j." scp -o StrictHostKeyChecking=no \
+  scss/luuniensuki/_navbar-imperial.scss \
+  root@47.236.61.220:/var/www/html/theme/luuniensuki/scss/luuniensuki/_navbar-imperial.scss
+
+# Increment theme revision and purge cache
+sshpass -p "[G^('0j." ssh -o StrictHostKeyChecking=no root@47.236.61.220 \
+  'mysql -u root -p"[G^('\''0j." moodle -e "UPDATE mdl_config SET value = UNIX_TIMESTAMP() WHERE name = '\''themerev'\'';" && \
+   cd /var/www/html && php admin/cli/purge_caches.php'
+```
 
 **Rollback Instructions** (if needed):
 ```bash
