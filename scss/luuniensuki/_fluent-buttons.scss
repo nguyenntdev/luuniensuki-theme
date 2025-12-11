@@ -1,0 +1,73 @@
+// ================================================================
+// FLUENT 2 BUTTON ENHANCEMENTS
+// Overlay on existing button styles
+// ================================================================
+
+@import '../tokens/fluent-component';
+
+// Remove all translateY hover effects (not Fluent 2)
+.btn,
+button:not(.close):not(.moodle-dialogue-close):not(.unstyled) {
+    // Override any translateY transforms
+    transform: none !important;
+    
+    &:hover,
+    &:active {
+        transform: none !important;
+    }
+}
+
+// Apply Fluent 2 timing to all buttons
+.btn {
+    transition: background-color $motion-duration-fast $motion-curve-easy-ease,
+                color $motion-duration-fast $motion-curve-easy-ease,
+                border-color $motion-duration-fast $motion-curve-easy-ease !important;
+}
+
+// Fluent 2 focus indicators
+.btn:focus-visible {
+    outline: $focus-stroke-width solid $focus-stroke-outer;
+    outline-offset: $focus-stroke-width;
+}
+
+// Primary button Fluent 2 refinements
+.btn-primary {
+    &:hover {
+        background-color: $button-primary-background-hover;
+    }
+    
+    &:active,
+    &.active {
+        background-color: $button-primary-background-pressed;
+    }
+}
+
+// Secondary button Fluent 2 refinements
+.btn-secondary,
+.btn-outline-primary {
+    &:hover {
+        background-color: $button-secondary-background-hover;
+    }
+    
+    &:active,
+    &.active {
+        background-color: $button-secondary-background-pressed;
+    }
+}
+
+// Icon buttons (circular)
+.btn-icon {
+    border-radius: $border-radius-circular;
+    
+    &.btn-rounded,
+    &.btn-circle {
+        border-radius: $border-radius-circular;
+    }
+}
+
+// Touch targets (WCAG 2.5.5)
+.btn:not(.btn-sm):not(.btn-icon-sm) {
+    min-height: 44px;
+    min-width: 44px;
+}
+

@@ -1,0 +1,172 @@
+// ================================================================
+// FLUENT 2 INTEGRATION LAYER
+// Bridges Fluent 2 tokens with existing Moodle/Boost structure
+// ================================================================
+
+@import '../tokens/fluent-component';
+
+// ===================
+// BOOTSTRAP/MOODLE VARIABLE MAPPING
+// Map Fluent 2 tokens to Bootstrap/Moodle expected variables
+// ===================
+
+// Colors
+$body-bg: $color-neutral-background-1;
+$body-color: $color-neutral-foreground-1;
+$primary: $color-brand-background;
+$secondary: $color-neutral-background-4;
+$success: $color-status-success-border;
+$info: $color-status-info-border;
+$warning: $color-status-warning-border;
+$danger: $color-status-danger-border;
+$light: $color-neutral-background-3;
+$dark: $color-neutral-background-1;
+
+// Text colors
+$text-muted: $color-neutral-foreground-3;
+
+// Borders
+$border-color: $color-neutral-stroke-2;
+$border-radius: $border-radius-medium;
+$border-radius-sm: $border-radius-small;
+$border-radius-lg: $border-radius-large;
+
+// Typography
+$font-family-sans-serif: $font-family-base;
+$font-size-base: $type-body-1-size;
+$line-height-base: $type-body-1-line-height / $type-body-1-size;
+$headings-font-family: $font-family-display;
+$headings-font-weight: $font-weight-semibold;
+
+// Spacing
+$spacer: $spacing-l; // 16px base
+
+// Shadows
+$box-shadow-sm: $shadow-2;
+$box-shadow: $shadow-4;
+$box-shadow-lg: $shadow-16;
+
+// Transitions
+$transition-base: all $motion-duration-fast $motion-curve-easy-ease;
+$transition-fade: opacity $motion-duration-normal $motion-curve-easy-ease;
+
+// Components
+$btn-border-radius: $button-border-radius;
+$btn-font-weight: $button-font-weight;
+$input-border-radius: $input-border-radius;
+$card-border-radius: $card-border-radius;
+
+// Navbar
+$navbar-nav-link-padding-x: $navbar-item-padding-horizontal;
+$navbar-padding-y: $spacing-s;
+
+// ===================
+// CSS CUSTOM PROPERTIES
+// Export Fluent 2 tokens as CSS variables for runtime use
+// ===================
+
+:root {
+    // Backgrounds
+    --fluent-color-background-1: #{$color-neutral-background-1};
+    --fluent-color-background-2: #{$color-neutral-background-2};
+    --fluent-color-background-3: #{$color-neutral-background-3};
+    --fluent-color-background-4: #{$color-neutral-background-4};
+    
+    // Brand
+    --fluent-color-brand: #{$color-brand-background};
+    --fluent-color-brand-hover: #{$color-brand-background-hover};
+    --fluent-color-brand-pressed: #{$color-brand-background-pressed};
+    
+    // Foregrounds
+    --fluent-color-foreground-1: #{$color-neutral-foreground-1};
+    --fluent-color-foreground-2: #{$color-neutral-foreground-2};
+    --fluent-color-foreground-3: #{$color-neutral-foreground-3};
+    
+    // Strokes
+    --fluent-color-stroke-1: #{$color-neutral-stroke-1};
+    --fluent-color-stroke-2: #{$color-neutral-stroke-2};
+    
+    // Spacing
+    --fluent-spacing-xs: #{$spacing-xs};
+    --fluent-spacing-s: #{$spacing-s};
+    --fluent-spacing-m: #{$spacing-m};
+    --fluent-spacing-l: #{$spacing-l};
+    --fluent-spacing-xl: #{$spacing-xl};
+    --fluent-spacing-xxl: #{$spacing-xxl};
+    
+    // Shadows
+    --fluent-shadow-2: #{$shadow-2};
+    --fluent-shadow-4: #{$shadow-4};
+    --fluent-shadow-8: #{$shadow-8};
+    
+    // Motion
+    --fluent-duration-fast: #{$motion-duration-fast};
+    --fluent-duration-normal: #{$motion-duration-normal};
+}
+
+// ===================
+// GLOBAL FLUENT 2 OVERRIDES
+// Apply Fluent 2 principles globally
+// ===================
+
+// Remove all translateY/lift animations (not Fluent 2)
+* {
+    &:hover, &:active {
+        transform: none !important;
+    }
+}
+
+// Ensure all transitions use Fluent 2 timing
+*:not([class*="animate-"]) {
+    transition-duration: $motion-duration-fast !important;
+    transition-timing-function: $motion-curve-easy-ease !important;
+}
+
+// Reduced motion support (WCAG 2.3.3)
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+// ===================
+// MOODLE-SPECIFIC OVERRIDES
+// Apply Fluent 2 to core Moodle elements
+// ===================
+
+body {
+    background-color: $color-neutral-background-1;
+    color: $color-neutral-foreground-1;
+    font-family: $font-family-base;
+}
+
+#page-wrapper {
+    background-color: $color-neutral-background-1;
+}
+
+// Links
+a:not(.btn) {
+    color: $color-brand-foreground-link;
+    
+    &:hover {
+        color: $color-brand-foreground-link-hover;
+    }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: $color-neutral-foreground-1;
+    font-family: $font-family-display;
+}
+
+// Focus indicators (WCAG 2.4.7)
+*:focus-visible {
+    outline: $focus-stroke-width solid $focus-stroke-outer;
+    outline-offset: $focus-stroke-width;
+}
+

@@ -1,0 +1,186 @@
+// ================================================================
+// FLUENT 2 COMPONENT TOKENS - Component-specific values
+// ================================================================
+
+@import 'fluent-alias';
+
+// ===================
+// BUTTON TOKENS
+// ===================
+
+// Primary Button
+$button-primary-background: $color-brand-background;
+$button-primary-background-hover: $color-brand-background-hover;
+$button-primary-background-pressed: $color-brand-background-pressed;
+$button-primary-background-disabled: $color-brand-background-disabled;
+$button-primary-foreground: $color-neutral-foreground-inverted;
+$button-primary-foreground-disabled: $color-neutral-foreground-disabled;
+$button-primary-border: transparent;
+
+// Secondary Button
+$button-secondary-background: transparent;
+$button-secondary-background-hover: $color-neutral-background-4;
+$button-secondary-background-pressed: $color-neutral-background-5;
+$button-secondary-foreground: $color-neutral-foreground-1;
+$button-secondary-foreground-hover: $color-neutral-foreground-1;
+$button-secondary-border: $color-neutral-stroke-1;
+$button-secondary-border-hover: $color-neutral-stroke-accessible;
+
+// Subtle Button
+$button-subtle-background: transparent;
+$button-subtle-background-hover: $color-neutral-background-4;
+$button-subtle-background-pressed: $color-neutral-background-5;
+$button-subtle-foreground: $color-neutral-foreground-2;
+
+// Button sizing
+$button-height-small: 24px;
+$button-height-medium: 32px;
+$button-height-large: 40px;
+
+$button-padding-horizontal-small: $spacing-s;
+$button-padding-horizontal-medium: $spacing-m;
+$button-padding-horizontal-large: $spacing-l;
+
+$button-min-width: 96px;
+$button-border-radius: $border-radius-medium;
+$button-font-size: $type-body-1-size;
+$button-font-weight: $font-weight-semibold;
+
+// ===================
+// INPUT TOKENS
+// ===================
+
+$input-background: $color-neutral-background-1;
+$input-background-hover: $color-neutral-background-2;
+$input-background-focus: $color-neutral-background-1;
+$input-background-disabled: $color-neutral-background-5;
+
+$input-foreground: $color-neutral-foreground-1;
+$input-foreground-placeholder: $color-neutral-foreground-4;
+$input-foreground-disabled: $color-neutral-foreground-disabled;
+
+$input-border: $color-neutral-stroke-1;
+$input-border-hover: $color-neutral-stroke-accessible;
+$input-border-focus: $color-brand-stroke-1;
+$input-border-error: $color-status-danger-border;
+$input-border-disabled: $color-neutral-stroke-disabled;
+
+$input-height: 32px;
+$input-padding-horizontal: $spacing-m;
+$input-border-radius: $border-radius-medium;
+$input-border-width: $stroke-width-thin;
+$input-border-width-focus: $stroke-width-thick;
+
+// ===================
+// CARD TOKENS
+// ===================
+
+$card-background: $color-neutral-background-3;
+$card-background-hover: $color-neutral-background-4;
+$card-foreground: $color-neutral-foreground-1;
+$card-border: $color-neutral-stroke-2;
+$card-border-radius: $border-radius-large;
+$card-padding: $spacing-l;
+$card-shadow-rest: $elevation-shadow-card-rest;
+$card-shadow-hover: $elevation-shadow-card-hover;
+
+// ===================
+// NAVBAR TOKENS
+// ===================
+
+$navbar-background: $color-neutral-background-2;
+$navbar-foreground: $color-neutral-foreground-1;
+$navbar-border: $color-neutral-stroke-2;
+$navbar-height: 48px;
+$navbar-height-expanded: 60px;
+$navbar-padding-horizontal: $spacing-l;
+$navbar-shadow: $elevation-shadow-rest;
+
+$navbar-item-padding-horizontal: $spacing-m;
+$navbar-item-padding-vertical: $spacing-s;
+$navbar-item-background-hover: $color-neutral-background-4;
+$navbar-item-background-active: $color-neutral-background-5;
+$navbar-item-indicator-color: $color-brand-foreground-1;
+$navbar-item-indicator-height: 2px;
+
+// ===================
+// DRAWER/SIDEBAR TOKENS
+// ===================
+
+$drawer-background: $color-neutral-background-2;
+$drawer-foreground: $color-neutral-foreground-1;
+$drawer-border: $color-neutral-stroke-2;
+$drawer-width-collapsed: 48px;
+$drawer-width-expanded: 280px;
+$drawer-width-wide: 320px;
+$drawer-padding: $spacing-l;
+$drawer-shadow: $elevation-shadow-dropdown;
+
+$drawer-item-padding-horizontal: $spacing-m;
+$drawer-item-padding-vertical: $spacing-s;
+$drawer-item-background-hover: $color-neutral-background-4;
+$drawer-item-background-active: $color-brand-background;
+$drawer-item-border-radius: $border-radius-medium;
+
+// ===================
+// FOOTER TOKENS
+// ===================
+
+$footer-background: $color-neutral-background-1;
+$footer-foreground: $color-neutral-foreground-2;
+$footer-border: $color-neutral-stroke-2;
+$footer-padding-vertical: $spacing-xxl;
+$footer-padding-horizontal: $spacing-l;
+
+// ===================
+// MODAL/DIALOG TOKENS
+// ===================
+
+$dialog-background: $color-neutral-background-3;
+$dialog-foreground: $color-neutral-foreground-1;
+$dialog-border: $color-neutral-stroke-1;
+$dialog-border-radius: $border-radius-xlarge;
+$dialog-shadow: $elevation-shadow-dialog;
+$dialog-padding: $spacing-xxl;
+
+// ===================
+// BADGE TOKENS
+// ===================
+
+$badge-background: $color-brand-background;
+$badge-foreground: $color-neutral-foreground-inverted;
+$badge-border-radius: $border-radius-circular;
+$badge-padding-horizontal: $spacing-s;
+$badge-padding-vertical: $spacing-xxs;
+$badge-font-size: $type-caption-1-size;
+$badge-font-weight: $font-weight-semibold;
+
+// ===================
+// PROGRESS TOKENS
+// ===================
+
+$progress-background: $color-neutral-background-5;
+$progress-foreground: $color-brand-background;
+$progress-height: 4px;
+$progress-border-radius: $border-radius-circular;
+
+// ===================
+// TOOLTIP TOKENS
+// ===================
+
+$tooltip-background: $color-neutral-background-inverted;
+$tooltip-foreground: $color-neutral-foreground-inverted;
+$tooltip-border-radius: $border-radius-medium;
+$tooltip-padding: $spacing-s $spacing-m;
+$tooltip-shadow: $elevation-shadow-dropdown;
+$tooltip-max-width: 240px;
+
+// ===================
+// FOCUS TOKENS
+// ===================
+
+$focus-stroke-outer: $color-neutral-foreground-1;
+$focus-stroke-inner: $color-neutral-background-1;
+$focus-stroke-width: $stroke-width-thick;
+
+

@@ -1,0 +1,47 @@
+// ================================================================
+// FLUENT 2 CARD ENHANCEMENTS
+// Overlay on existing card styles
+// ================================================================
+
+@import '../tokens/fluent-component';
+
+// Remove all translateY hover effects (not Fluent 2)
+.card,
+.dashboard-card {
+    transform: none !important;
+    
+    &:hover {
+        transform: none !important;
+        // Fluent 2 uses shadow elevation only
+        box-shadow: $card-shadow-hover;
+    }
+}
+
+// Apply Fluent 2 timing
+.card,
+.dashboard-card {
+    transition: box-shadow $motion-duration-normal $motion-curve-decelerate,
+                border-color $motion-duration-fast $motion-curve-easy-ease,
+                background-color $motion-duration-fast $motion-curve-easy-ease !important;
+}
+
+// Fluent 2 border radius
+.card,
+.dashboard-card {
+    border-radius: $card-border-radius;
+}
+
+// Card images
+.card-img,
+.card-img-top,
+.dashboard-card-img {
+    border-radius: $card-border-radius $card-border-radius 0 0;
+}
+
+// Focus for clickable cards
+a.card:focus-visible,
+.card-clickable:focus-visible {
+    outline: $focus-stroke-width solid $focus-stroke-outer;
+    outline-offset: $focus-stroke-width;
+}
+

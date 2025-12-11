@@ -1,0 +1,194 @@
+// ================================================================
+// FLUENT 2 GLOBAL TOKENS - Raw primitive values
+// These should never be used directly in components
+// ================================================================
+
+// ===================
+// COLOR PRIMITIVES
+// ===================
+
+// Grey Scale (Fluent 2 neutral palette)
+$grey-2: #1f1f1f;
+$grey-4: #292929;
+$grey-6: #333333;
+$grey-8: #3d3d3d;
+$grey-10: #474747;
+$grey-12: #525252;
+$grey-14: #5c5c5c;
+$grey-22: #8a8a8a;
+$grey-26: #9e9e9e;
+$grey-34: #b8b8b8;
+$grey-38: #c4c4c4;
+$grey-42: #d1d1d1;
+$grey-46: #dbdbdb;
+$grey-78: #f0f0f0;
+$grey-82: #f5f5f5;
+$grey-86: #fafafa;
+$grey-92: #ffffff;
+
+// Brand Colors (Imperial Heritage)
+$brand-shade-60: #3D3321;
+$brand-shade-50: #4D4129;
+$brand-shade-40: #5E5032;
+$brand-shade-30: #7A683D;
+$brand-shade-20: #96804A;
+$brand-shade-10: #B09A53;
+$brand-primary: #C4A35A;      // Imperial Gold (your primary)
+$brand-tint-10: #CCAE6B;
+$brand-tint-20: #D4B97C;
+$brand-tint-30: #DCC48D;
+$brand-tint-40: #E4CF9E;
+$brand-tint-50: #ECDAAF;
+$brand-tint-60: #F4E5C0;
+
+// Deep Navy Scale (your heritage dark theme)
+$navy-100: hsl(222, 47%, 4%);
+$navy-90: hsl(222, 47%, 6%);    // $deep-navy
+$navy-80: hsl(222, 35%, 10%);
+$navy-70: hsl(222, 30%, 14%);
+$navy-60: hsl(222, 30%, 18%);
+$navy-50: hsl(222, 25%, 22%);
+$navy-40: hsl(222, 20%, 28%);
+$navy-30: hsl(222, 15%, 35%);
+$navy-20: hsl(222, 10%, 50%);
+$navy-10: hsl(222, 5%, 65%);
+
+// Semantic Color Primitives
+$red-primary: #d13438;
+$red-shade-10: #bc2f32;
+$red-shade-20: #a52a2d;
+$red-tint-10: #d74649;
+$red-tint-20: #dc5e62;
+
+$green-primary: #107c10;
+$green-shade-10: #0e6b0e;
+$green-shade-20: #0c5a0c;
+$green-tint-10: #27a327;
+$green-tint-20: #3db93d;
+
+$yellow-primary: #ffc600;
+$yellow-shade-10: #d9aa00;
+$yellow-tint-10: #ffd033;
+
+$blue-primary: #0078d4;
+$blue-shade-10: #006cbd;
+$blue-tint-10: #1a86d9;
+
+// ===================
+// TYPOGRAPHY PRIMITIVES
+// ===================
+
+// Font Families
+$font-family-base: 'Segoe UI', 'Segoe UI Web', 'Be Vietnam Pro', 
+    -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+$font-family-mono: 'Cascadia Code', 'Consolas', 'Liberation Mono', 
+    'Courier New', monospace;
+$font-family-display: 'Playfair Display', 'Times New Roman', serif;
+
+// Font Sizes (Fluent 2 type ramp)
+$font-size-100: 10px;
+$font-size-200: 12px;
+$font-size-300: 14px;
+$font-size-400: 16px;
+$font-size-500: 20px;
+$font-size-600: 24px;
+$font-size-700: 28px;
+$font-size-800: 32px;
+$font-size-900: 40px;
+$font-size-1000: 68px;
+
+// Line Heights
+$line-height-100: 14px;
+$line-height-200: 16px;
+$line-height-300: 20px;
+$line-height-400: 22px;
+$line-height-500: 28px;
+$line-height-600: 32px;
+$line-height-700: 36px;
+$line-height-800: 40px;
+$line-height-900: 52px;
+$line-height-1000: 92px;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// ===================
+// SPACING PRIMITIVES (4px grid)
+// ===================
+
+$space-none: 0;
+$space-xxs: 2px;
+$space-xs: 4px;
+$space-s: 8px;
+$space-m: 12px;
+$space-l: 16px;
+$space-xl: 20px;
+$space-xxl: 24px;
+$space-xxxl: 32px;
+$space-xxxxl: 40px;
+$space-xxxxxl: 48px;
+
+// ===================
+// BORDER RADIUS PRIMITIVES
+// ===================
+
+$radius-none: 0;
+$radius-small: 2px;
+$radius-medium: 4px;
+$radius-large: 8px;
+$radius-xlarge: 12px;
+$radius-circular: 9999px;
+
+// ===================
+// SHADOW PRIMITIVES
+// ===================
+
+$shadow-2: 0 1px 2px rgba(0, 0, 0, 0.14);
+$shadow-4: 0 2px 4px rgba(0, 0, 0, 0.14);
+$shadow-8: 0 4px 8px rgba(0, 0, 0, 0.14);
+$shadow-16: 0 8px 16px rgba(0, 0, 0, 0.14);
+$shadow-28: 0 14px 28px rgba(0, 0, 0, 0.24);
+$shadow-64: 0 32px 64px rgba(0, 0, 0, 0.24);
+
+// Dark theme shadow variants (stronger)
+$shadow-2-dark: 0 1px 2px rgba(0, 0, 0, 0.48);
+$shadow-4-dark: 0 2px 4px rgba(0, 0, 0, 0.48);
+$shadow-8-dark: 0 4px 8px rgba(0, 0, 0, 0.48);
+$shadow-16-dark: 0 8px 16px rgba(0, 0, 0, 0.48);
+$shadow-28-dark: 0 14px 28px rgba(0, 0, 0, 0.48);
+$shadow-64-dark: 0 32px 64px rgba(0, 0, 0, 0.48);
+
+// ===================
+// TIMING PRIMITIVES
+// ===================
+
+$duration-ultra-fast: 50ms;
+$duration-faster: 100ms;
+$duration-fast: 150ms;
+$duration-normal: 200ms;
+$duration-slow: 300ms;
+$duration-slower: 400ms;
+$duration-ultra-slow: 500ms;
+
+// Easing functions
+$curve-accelerate-mid: cubic-bezier(0.7, 0, 1, 0.5);
+$curve-accelerate-max: cubic-bezier(1, 0, 1, 1);
+$curve-decelerate-mid: cubic-bezier(0.1, 0.9, 0.2, 1);
+$curve-decelerate-max: cubic-bezier(0, 0, 0, 1);
+$curve-easy-ease: cubic-bezier(0.33, 0, 0.67, 1);
+$curve-easy-ease-max: cubic-bezier(0.8, 0, 0.2, 1);
+$curve-linear: linear;
+
+// ===================
+// STROKE PRIMITIVES
+// ===================
+
+$stroke-width-thin: 1px;
+$stroke-width-thick: 2px;
+$stroke-width-thicker: 3px;
+$stroke-width-thickest: 4px;
+
+

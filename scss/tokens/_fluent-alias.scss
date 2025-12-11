@@ -1,0 +1,217 @@
+// ================================================================
+// FLUENT 2 ALIAS TOKENS - Semantic mappings
+// These provide meaning to raw values
+// ================================================================
+
+@import 'fluent-global';
+
+// ===================
+// COLOR ALIAS TOKENS
+// ===================
+
+// Background Colors
+$color-neutral-background-1: $navy-90;           // Main page background
+$color-neutral-background-2: $navy-80;           // Secondary surfaces
+$color-neutral-background-3: $navy-70;           // Tertiary surfaces (cards)
+$color-neutral-background-4: $navy-60;           // Elevated surfaces
+$color-neutral-background-5: $navy-50;           // Disabled backgrounds
+$color-neutral-background-6: $navy-40;           // Subtle backgrounds
+
+// Inverted backgrounds (for badges, tooltips)
+$color-neutral-background-inverted: $grey-92;
+$color-neutral-background-static: $grey-86;
+
+// Brand Backgrounds
+$color-brand-background: $brand-primary;
+$color-brand-background-hover: $brand-tint-10;
+$color-brand-background-pressed: $brand-shade-10;
+$color-brand-background-selected: $brand-shade-20;
+$color-brand-background-disabled: $brand-shade-50;
+
+// Foreground Colors
+$color-neutral-foreground-1: $grey-92;           // Primary text
+$color-neutral-foreground-2: $grey-78;           // Secondary text
+$color-neutral-foreground-3: $grey-46;           // Tertiary text
+$color-neutral-foreground-4: $grey-34;           // Placeholder text
+$color-neutral-foreground-disabled: $grey-22;    // Disabled text
+$color-neutral-foreground-inverted: $navy-90;    // Inverted text
+
+// Brand Foreground
+$color-brand-foreground-1: $brand-primary;
+$color-brand-foreground-2: $brand-tint-20;
+$color-brand-foreground-link: $brand-tint-30;
+$color-brand-foreground-link-hover: $brand-tint-40;
+$color-brand-foreground-link-pressed: $brand-primary;
+
+// Stroke/Border Colors
+$color-neutral-stroke-1: $navy-50;               // Primary borders
+$color-neutral-stroke-2: $navy-60;               // Secondary borders
+$color-neutral-stroke-3: $navy-70;               // Subtle borders
+$color-neutral-stroke-accessible: $grey-46;      // Accessible borders
+$color-neutral-stroke-disabled: $navy-60;        // Disabled borders
+
+// Brand Stroke
+$color-brand-stroke-1: $brand-primary;
+$color-brand-stroke-2: $brand-tint-20;
+
+// Status Colors
+$color-status-success-background: rgba($green-primary, 0.2);
+$color-status-success-foreground: $green-tint-20;
+$color-status-success-border: $green-primary;
+
+$color-status-warning-background: rgba($yellow-primary, 0.2);
+$color-status-warning-foreground: $yellow-tint-10;
+$color-status-warning-border: $yellow-primary;
+
+$color-status-danger-background: rgba($red-primary, 0.2);
+$color-status-danger-foreground: $red-tint-20;
+$color-status-danger-border: $red-primary;
+
+$color-status-info-background: rgba($blue-primary, 0.2);
+$color-status-info-foreground: $blue-tint-10;
+$color-status-info-border: $blue-primary;
+
+// ===================
+// TYPOGRAPHY ALIAS TOKENS
+// ===================
+
+// Caption (small text, labels)
+$type-caption-1-size: $font-size-200;
+$type-caption-1-line-height: $line-height-200;
+$type-caption-1-weight: $font-weight-regular;
+
+$type-caption-1-strong-size: $font-size-200;
+$type-caption-1-strong-line-height: $line-height-200;
+$type-caption-1-strong-weight: $font-weight-semibold;
+
+// Body (default text)
+$type-body-1-size: $font-size-300;
+$type-body-1-line-height: $line-height-300;
+$type-body-1-weight: $font-weight-regular;
+
+$type-body-1-strong-size: $font-size-300;
+$type-body-1-strong-line-height: $line-height-300;
+$type-body-1-strong-weight: $font-weight-semibold;
+
+$type-body-2-size: $font-size-400;
+$type-body-2-line-height: $line-height-400;
+$type-body-2-weight: $font-weight-regular;
+
+// Subtitle
+$type-subtitle-1-size: $font-size-500;
+$type-subtitle-1-line-height: $line-height-500;
+$type-subtitle-1-weight: $font-weight-semibold;
+
+$type-subtitle-2-size: $font-size-400;
+$type-subtitle-2-line-height: $line-height-400;
+$type-subtitle-2-weight: $font-weight-semibold;
+
+// Title
+$type-title-1-size: $font-size-800;
+$type-title-1-line-height: $line-height-800;
+$type-title-1-weight: $font-weight-semibold;
+
+$type-title-2-size: $font-size-700;
+$type-title-2-line-height: $line-height-700;
+$type-title-2-weight: $font-weight-semibold;
+
+$type-title-3-size: $font-size-600;
+$type-title-3-line-height: $line-height-600;
+$type-title-3-weight: $font-weight-semibold;
+
+// Large Title (hero sections)
+$type-large-title-size: $font-size-900;
+$type-large-title-line-height: $line-height-900;
+$type-large-title-weight: $font-weight-semibold;
+
+// Display (headlines)
+$type-display-size: $font-size-1000;
+$type-display-line-height: $line-height-1000;
+$type-display-weight: $font-weight-bold;
+
+// ===================
+// SPACING ALIAS TOKENS
+// ===================
+
+$spacing-none: $space-none;
+$spacing-xxs: $space-xxs;
+$spacing-xs: $space-xs;
+$spacing-s: $space-s;
+$spacing-m: $space-m;
+$spacing-l: $space-l;
+$spacing-xl: $space-xl;
+$spacing-xxl: $space-xxl;
+$spacing-xxxl: $space-xxxl;
+
+// Component-specific spacing aliases
+$spacing-horizontal-none: $space-none;
+$spacing-horizontal-xxs: $space-xxs;
+$spacing-horizontal-xs: $space-xs;
+$spacing-horizontal-s: $space-s;
+$spacing-horizontal-m: $space-m;
+$spacing-horizontal-l: $space-l;
+
+$spacing-vertical-none: $space-none;
+$spacing-vertical-xxs: $space-xxs;
+$spacing-vertical-xs: $space-xs;
+$spacing-vertical-s: $space-s;
+$spacing-vertical-m: $space-m;
+$spacing-vertical-l: $space-l;
+
+// ===================
+// CORNER RADIUS ALIAS TOKENS
+// ===================
+
+$border-radius-none: $radius-none;
+$border-radius-small: $radius-small;
+$border-radius-medium: $radius-medium;
+$border-radius-large: $radius-large;
+$border-radius-xlarge: $radius-xlarge;
+$border-radius-circular: $radius-circular;
+
+// ===================
+// SHADOW ALIAS TOKENS
+// ===================
+
+$shadow-2: $shadow-2-dark;
+$shadow-4: $shadow-4-dark;
+$shadow-8: $shadow-8-dark;
+$shadow-16: $shadow-16-dark;
+$shadow-28: $shadow-28-dark;
+$shadow-64: $shadow-64-dark;
+
+// Elevation aliases
+$elevation-shadow-rest: $shadow-2;
+$elevation-shadow-hover: $shadow-4;
+$elevation-shadow-active: $shadow-2;
+$elevation-shadow-card-rest: $shadow-4;
+$elevation-shadow-card-hover: $shadow-8;
+$elevation-shadow-dialog: $shadow-64;
+$elevation-shadow-dropdown: $shadow-16;
+
+// ===================
+// MOTION ALIAS TOKENS
+// ===================
+
+$motion-duration-ultra-fast: $duration-ultra-fast;
+$motion-duration-faster: $duration-faster;
+$motion-duration-fast: $duration-fast;
+$motion-duration-normal: $duration-normal;
+$motion-duration-slow: $duration-slow;
+$motion-duration-slower: $duration-slower;
+
+$motion-curve-accelerate: $curve-accelerate-mid;
+$motion-curve-decelerate: $curve-decelerate-mid;
+$motion-curve-easy-ease: $curve-easy-ease;
+$motion-curve-linear: $curve-linear;
+
+// ===================
+// STROKE ALIAS TOKENS
+// ===================
+
+$stroke-width-thin: $stroke-width-thin;
+$stroke-width-thick: $stroke-width-thick;
+$stroke-width-thicker: $stroke-width-thicker;
+$stroke-width-thickest: $stroke-width-thickest;
+
+

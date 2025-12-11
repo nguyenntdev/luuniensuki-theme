@@ -1,7 +1,27 @@
+// Default Luuniensuki Theme
+// Enhanced with Fluent 2 Design System
+
+// ========================================
+// FLUENT 2 FOUNDATION
+// ========================================
+@import "tokens/fluent-global";
+@import "tokens/fluent-alias";
+@import "tokens/fluent-component";
+
+// Import Fluent 2 integration layer
+@import "luuniensuki/fluent-integration";
+
+// ========================================
+// LEGACY THEME BASE
+// ========================================
 @import "luuniensuki/transitions";
 @import "luuniensuki/variables";
 @import "luuniensuki/darkandlightvariables";
 @import "../../boost/scss/preset/default";
+
+// ========================================
+// LAYOUT & COMPONENTS
+// ========================================
 @import "luuniensuki/general";
 @import "luuniensuki/pages";
 @import "luuniensuki/blocks";
@@ -10,12 +30,30 @@
 @import "luuniensuki/footer";
 @import "luuniensuki/breadcrumb";
 @import "luuniensuki/course";
+
+// Fluent 2 component overlays
+@import "luuniensuki/fluent-buttons";
+@import "luuniensuki/fluent-cards";
+
+
+// ========================================
+// ACCESSIBILITY
+// ========================================
 @import "luuniensuki/mixins/accessibilityfontsize";
 @import "luuniensuki/accessibilitybar";
 @import "luuniensuki/accessibilitystyles";
+
+// ========================================
+// PAGES
+// ========================================
 @import "luuniensuki/login";
 @import "luuniensuki/mydashboard";
 @import "luuniensuki/frontpage";
 @import "luuniensuki/profile";
 @import "luuniensuki/enrol";
 @import "luuniensuki/quiz";
+
+// ========================================
+// FLUENT 2 LIGHT THEME SUPPORT
+// ========================================
+@import "tokens/fluent-light-overrides";

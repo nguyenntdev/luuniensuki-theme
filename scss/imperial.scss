@@ -1,7 +1,22 @@
 // Imperial Vietnamese Heritage Theme
 // Lưu Niên Sử Kí Design System for Moove
+// Enhanced with Fluent 2 Design System
 
-// Import imperial color variables
+// ========================================
+// FLUENT 2 FOUNDATION
+// ========================================
+// Import Fluent 2 design tokens (must come first)
+@import "tokens/fluent-global";
+@import "tokens/fluent-alias";
+@import "tokens/fluent-component";
+
+// Import Fluent 2 integration layer
+@import "luuniensuki/fluent-integration";
+
+// ========================================
+// LEGACY IMPERIAL VARIABLES
+// ========================================
+// Import imperial color variables (for backwards compatibility)
 @import "luuniensuki/imperial-variables";
 
 // Import base dark mode styles (must come after variables)
@@ -10,6 +25,9 @@
 // Import imperial gradients
 @import "luuniensuki/gradients";
 
+// ========================================
+// CORE SYSTEMS
+// ========================================
 // Import typography system
 @import "luuniensuki/typography";
 
@@ -22,14 +40,31 @@
 // Import utilities
 @import "luuniensuki/utilities";
 
+// ========================================
+// COMPONENTS
+// ========================================
 // Import component enhancements
 @import "luuniensuki/cards";
 @import "luuniensuki/buttons-imperial";
 @import "luuniensuki/accessibility-enhanced";
 @import "luuniensuki/loading";
 
+// Fluent 2 component overlays
+@import "luuniensuki/fluent-buttons";
+@import "luuniensuki/fluent-cards";
+
+
+// ========================================
+// LAYOUT
+// ========================================
 // Import layout enhancements
 @import "luuniensuki/frontpage-imperial";
 @import "luuniensuki/navbar-imperial";
 @import "luuniensuki/drawers-imperial";
 @import "luuniensuki/accessibilitybar-imperial";
+
+// ========================================
+// FLUENT 2 LIGHT THEME SUPPORT
+// ========================================
+@import "tokens/fluent-light-overrides";
+

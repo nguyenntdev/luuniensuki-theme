@@ -1,0 +1,124 @@
+// ================================================================
+// FLUENT 2 LIGHT THEME VARIANT
+// Overrides for light mode
+// ================================================================
+
+@import 'fluent-global';
+
+// ===================
+// LIGHT MODE COLOR OVERRIDES
+// ===================
+
+// Background Colors (Light theme)
+$color-neutral-background-1-light: $grey-92;           // Main background
+$color-neutral-background-2-light: $grey-86;           // Secondary surfaces
+$color-neutral-background-3-light: $grey-82;           // Cards, elevated
+$color-neutral-background-4-light: $grey-78;           // Hover states
+$color-neutral-background-5-light: $grey-46;           // Disabled
+$color-neutral-background-6-light: $grey-42;           // Subtle
+
+// Inverted backgrounds
+$color-neutral-background-inverted-light: $grey-14;
+$color-neutral-background-static-light: $grey-6;
+
+// Foreground Colors (Light theme)
+$color-neutral-foreground-1-light: $grey-14;           // Primary text
+$color-neutral-foreground-2-light: $grey-26;           // Secondary text
+$color-neutral-foreground-3-light: $grey-38;           // Tertiary text
+$color-neutral-foreground-4-light: $grey-46;           // Placeholder
+$color-neutral-foreground-disabled-light: $grey-78;    // Disabled
+$color-neutral-foreground-inverted-light: $grey-92;    // Inverted
+
+// Stroke/Border Colors (Light theme)
+$color-neutral-stroke-1-light: $grey-78;
+$color-neutral-stroke-2-light: $grey-82;
+$color-neutral-stroke-3-light: $grey-86;
+$color-neutral-stroke-accessible-light: $grey-38;
+$color-neutral-stroke-disabled-light: $grey-86;
+
+// Brand colors remain the same (adjust if needed for contrast)
+$color-brand-background-light: $brand-primary;
+$color-brand-background-hover-light: $brand-shade-10;
+$color-brand-background-pressed-light: $brand-shade-20;
+
+// Shadows (lighter for light theme)
+$shadow-2-light: 0 1px 2px rgba(0, 0, 0, 0.08);
+$shadow-4-light: 0 2px 4px rgba(0, 0, 0, 0.08);
+$shadow-8-light: 0 4px 8px rgba(0, 0, 0, 0.08);
+$shadow-16-light: 0 8px 16px rgba(0, 0, 0, 0.12);
+$shadow-28-light: 0 14px 28px rgba(0, 0, 0, 0.16);
+$shadow-64-light: 0 32px 64px rgba(0, 0, 0, 0.16);
+
+// ===================
+// LIGHT MODE APPLICATION
+// ===================
+
+// Apply light theme when body has data attribute or class
+[data-theme="light"],
+body.theme-light {
+    // Backgrounds
+    --fluent-color-background-1: #{$color-neutral-background-1-light};
+    --fluent-color-background-2: #{$color-neutral-background-2-light};
+    --fluent-color-background-3: #{$color-neutral-background-3-light};
+    --fluent-color-background-4: #{$color-neutral-background-4-light};
+    
+    // Foregrounds
+    --fluent-color-foreground-1: #{$color-neutral-foreground-1-light};
+    --fluent-color-foreground-2: #{$color-neutral-foreground-2-light};
+    --fluent-color-foreground-3: #{$color-neutral-foreground-3-light};
+    --fluent-color-foreground-disabled: #{$color-neutral-foreground-disabled-light};
+    
+    // Strokes
+    --fluent-color-stroke-1: #{$color-neutral-stroke-1-light};
+    --fluent-color-stroke-2: #{$color-neutral-stroke-2-light};
+    --fluent-color-stroke-accessible: #{$color-neutral-stroke-accessible-light};
+    
+    // Shadows
+    --fluent-shadow-2: #{$shadow-2-light};
+    --fluent-shadow-4: #{$shadow-4-light};
+    --fluent-shadow-8: #{$shadow-8-light};
+    --fluent-shadow-16: #{$shadow-16-light};
+    
+    // Component overrides
+    .navbar {
+        background-color: $color-neutral-background-2-light;
+        border-bottom-color: $color-neutral-stroke-1-light;
+    }
+    
+    .drawer {
+        background-color: $color-neutral-background-2-light;
+        border-color: $color-neutral-stroke-1-light;
+    }
+    
+    .card {
+        background-color: $color-neutral-background-3-light;
+        border-color: $color-neutral-stroke-2-light;
+    }
+    
+    .form-control {
+        background-color: $color-neutral-background-1-light;
+        border-color: $color-neutral-stroke-1-light;
+        color: $color-neutral-foreground-1-light;
+        
+        &::placeholder {
+            color: $color-neutral-foreground-4-light;
+        }
+    }
+}
+
+// ===================
+// AUTO THEME SWITCHING
+// ===================
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        --fluent-color-background-1: #{$color-neutral-background-1-light};
+        --fluent-color-background-2: #{$color-neutral-background-2-light};
+        --fluent-color-background-3: #{$color-neutral-background-3-light};
+        --fluent-color-foreground-1: #{$color-neutral-foreground-1-light};
+        --fluent-color-foreground-2: #{$color-neutral-foreground-2-light};
+        --fluent-color-stroke-1: #{$color-neutral-stroke-1-light};
+        --fluent-shadow-4: #{$shadow-4-light};
+    }
+}
+
